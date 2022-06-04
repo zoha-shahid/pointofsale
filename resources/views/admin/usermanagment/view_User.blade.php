@@ -25,7 +25,7 @@
                     <div class="col-2">
                         <div class="btn-group">
                             <div class="buttonexport" id="buttonlist">
-                                <button type="button" class="btn btn-warning"><a class="btn btn-add" href="#"><i class="fa fa-plus"></i>Add Users</button>
+                                <button type="button" class="btn btn-warning"><a class="btn btn-add" href="/adduser"><i class="fa fa-plus"></i>Add Users</button>
                                 </a>
                             </div>
                         </div>

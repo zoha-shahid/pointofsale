@@ -35,7 +35,7 @@
         </a>
         <div class="collapse" id="page-layouts">
           <ul class="nav flex-column sub-menu">
-            <li class="nav-item d-none d-lg-block"> <a class="nav-link" href="/adduser">Users</a></li>
+            <li class="nav-item d-none d-lg-block"> <a class="nav-link" href="/viewUser">Users</a></li>
             <li class="nav-item"> <a class="nav-link" href="/addroles">Roles</a></li>
             <li class="nav-item d-none d-lg-block"> <a class="nav-link" href="/addpermission">Sales Commission Agents</a></li>
           </ul>
