@@ -33,7 +33,3 @@ Route::get('/addpermission', function () {
 Route::get('/no', function () {
     return view('admin.usermanagment.checkitrff');
 });
-
-Route::get('/viewRole', function () {
-    return view('admin.usermanagment.view_Role');
-});
