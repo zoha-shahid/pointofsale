@@ -37,3 +37,11 @@ Route::get('/no', function () {
 Route::get('/viewRole', function () {
     return view('admin.usermanagment.view_Role');
 });
+
+Route::get('/viewRole', function () {
+    return view('admin.usermanagment.view_Role');
+});
+
+Route::get('/viewRole', function () {
+    return view('admin.usermanagment.view_Role');
+});
