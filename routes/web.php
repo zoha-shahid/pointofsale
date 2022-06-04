@@ -28,7 +28,7 @@ Route::get('/addroles', function () {
     return view('admin.usermanagment.add_Roles');
 });
 Route::get('/addpermission', function () {
-    return view('admin.usermanagment.Addsalescommission');
+//    return view('admin.usermanagment.Addsalescommission');
 });
 Route::get('/no', function () {
     return view('admin.usermanagment.checkitrff');
@@ -45,3 +45,6 @@ Route::get('/viewRole', function () {
 Route::get('/viewRole', function () {
     return view('admin.usermanagment.view_Role');
 });
+
+
+//saqlain
