@@ -30,20 +30,11 @@ Route::get('/addroles', function () {
 Route::get('/addpermission', function () {
 //    return view('admin.usermanagment.Addsalescommission');
 });
-Route::get('/no', function () {
-    return view('admin.usermanagment.checkitrff');
-});
+
 
 Route::get('/viewRole', function () {
     return view('admin.usermanagment.view_Role');
 });
 
-Route::get('/viewRole', function () {
-    return view('admin.usermanagment.view_Role');
-});
-
-Route::get('/viewRole', function () {
-    return view('admin.usermanagment.view_Role');
-});
 
 
