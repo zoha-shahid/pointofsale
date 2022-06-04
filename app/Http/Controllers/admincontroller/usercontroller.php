@@ -50,6 +50,12 @@ class usercontroller extends Controller
         $adduser->save();
         return redirect('/addusers')->with('flash_message_success', 'product Added Successfully!!');
     }
+// for view data of user page
+public function viewUser()
+{
+    $shows = adduser::get();
+    return view('admin.usermanagment.view_User')->with(compact('shows'));
+}
 
 
 }

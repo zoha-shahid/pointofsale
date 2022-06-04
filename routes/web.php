@@ -28,13 +28,7 @@ Route::get('/addroles', function () {
     return view('admin.usermanagment.add_Roles');
 });
 Route::get('/addpermission', function () {
-//    return view('admin.usermanagment.Addsalescommission');
+   return view('admin.usermanagment.Addsalescommission');
 });
 
-
-Route::get('/viewRole', function () {
-    return view('admin.usermanagment.view_Role');
-});
-
-
-
+Route::get('/viewUser', [usercontroller::class, 'viewUser']);
