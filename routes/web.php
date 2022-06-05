@@ -27,6 +27,10 @@ Route::group(array('prefix' => 'dashboard'), function () {
         Route::get('add',[UserController::class, 'addForm']);
         Route::POST('add', [UserController::class, 'addUser']);
         Route::get('pdf', [UserController::class, 'ExportPDF']);
+        Route::get('excel', [UserController::class, 'ExportExcel']);
+        Route::get('csv', [UserController::class, 'ExportCSV']);
+        Route::get('col', [UserController::class, 'col']);
+
 
     });
 });

@@ -7,7 +7,8 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use App\Http\Controllers\Controller;
 use RealRashid\SweetAlert\Facades\Alert;
-use PDF;
+use PDF,Excel;
+use App\Exports\UsersExport;
 class UserController extends Controller
 {
     // for view data of user page
@@ -66,7 +67,14 @@ class UserController extends Controller
     {
         $data = adduser::get()->toArray();
         $pdf = PDF::loadView('admin.UserManagement.Users.pdf', compact('data'));
-
         return $pdf->download('itsolutionstuff.pdf');
+    }
+    public function ExportExcel()
+    {
+        return Excel::download(new UsersExport, 'users.xlsx');
+    }
+
+    public  function ExportCSV(){
+        return Excel::download(new UsersExport, 'users.csv');
     }
 }
