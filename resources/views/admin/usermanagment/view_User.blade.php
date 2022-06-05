@@ -36,6 +36,9 @@
                     </div></div>
               <div class="row">
                 <div class="col-12">
+                    <button type="button" class="btn btn-danger btn-sm"><i class="far fa-file-pdf"></i> PDF</button>
+                    <button type="button" class="btn btn-success btn-sm"><i class="far fa-file-excel"></i> Excel</button>
+                    <button type="button" class="btn btn-success btn-sm"><i class="far fa-file"></i> CSV</button>
                   <div class="table-responsive">
                     <table id="order-listing" class="table">
                       <thead>
@@ -91,3 +94,4 @@
 <!-- End custom js for this page-->
 
 
+</div>
