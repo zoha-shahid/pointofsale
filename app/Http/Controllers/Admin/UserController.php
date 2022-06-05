@@ -64,12 +64,8 @@ class UserController extends Controller
 
     public function ExportPDF()
     {
-        $data = [
-            'title' => 'Welcome to ItSolutionStuff.com',
-            'date' => date('m/d/Y')
-        ];
-
-        $pdf = PDF::loadView('admin.UserManagement.Users.pdf', $data);
+        $data = adduser::get()->toArray();
+        $pdf = PDF::loadView('admin.UserManagement.Users.pdf', compact('data'));
 
         return $pdf->download('itsolutionstuff.pdf');
     }

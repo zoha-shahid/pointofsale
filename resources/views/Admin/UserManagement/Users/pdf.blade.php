@@ -1,35 +1,37 @@
 <!DOCTYPE html>
 <html>
-<head><link rel="stylesheet" href="invoice.css"></head>
-<body style="padding: 3rem">
-<h1>Invoice</h1>
-Awesome company<br />
-7026 Hunters Creek Dr<br />
-
-
-
-<table class="table">
-    <thead>
-    <tr>
-        <th>Item Code</th>
-        <th>Description</th>
-        <th>Quantity</th>
-        <th>Unit Price</th>
-        <th>Total Price</th>
-    </tr>
-    </thead>
-
- {{--   {{ for order_line in invoice.order_lines }}
-    <tr>
-        <td>{{ order_line.item_code | html.escape }}</td>
-        <td>{{ order_line.description | html.escape }}</td>
-        <td class="text-end">${{ order_line.quantity }}</td>
-        <td class="text-end">${{ order_line.unit_price | math.format "F2" }}</td>
-        <td class="text-end">${{ order_line.total_price | math.format "F2" }}</td>
-    </tr>
-    {{ end }}--}}
-
-
-</table>
-</body>
+    <head>
+        <style>
+            table, th, td {
+                border: 1px solid;
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body style="padding: 3rem">
+        <h1 style="text-align: center;color: #3b3b86;">Website  Name</h1>
+        <h4> All Users</h4><br />
+        <table width="100%"  >
+            <thead>
+                <tr width="100%">
+                    <th>Sr#.</th>
+                    <th>Username</th>
+                    <th>Name</th>
+                    <th>Role</th>
+                    <th>Email</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach ($data as $key=>$show)
+                    <tr width="100%">
+                        <td>{{$key++ }}</td>
+                        <td>{{ $show['First_name'] }}</td>
+                        <td>{{ $show['Username'] }}</td>
+                        <td>{{ $show['Role']}}</td>
+                        <td>{{ $show[ 'Email']}}</td>
+                    </tr>
+                @endforeach
+            </tbody>
+        </table>
+    </body>
 </html>
