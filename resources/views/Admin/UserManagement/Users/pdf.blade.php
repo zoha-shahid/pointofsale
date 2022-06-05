@@ -1,16 +1,35 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <title>Hi</title>
-</head>
-<body>
-<h1>{{ $title }}</h1>
-<p>{{ $date }}</p>
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-    proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+<head><link rel="stylesheet" href="invoice.css"></head>
+<body style="padding: 3rem">
+<h1>Invoice</h1>
+Awesome company<br />
+7026 Hunters Creek Dr<br />
+
+
+
+<table class="table">
+    <thead>
+    <tr>
+        <th>Item Code</th>
+        <th>Description</th>
+        <th>Quantity</th>
+        <th>Unit Price</th>
+        <th>Total Price</th>
+    </tr>
+    </thead>
+
+ {{--   {{ for order_line in invoice.order_lines }}
+    <tr>
+        <td>{{ order_line.item_code | html.escape }}</td>
+        <td>{{ order_line.description | html.escape }}</td>
+        <td class="text-end">${{ order_line.quantity }}</td>
+        <td class="text-end">${{ order_line.unit_price | math.format "F2" }}</td>
+        <td class="text-end">${{ order_line.total_price | math.format "F2" }}</td>
+    </tr>
+    {{ end }}--}}
+
+
+</table>
 </body>
 </html>
