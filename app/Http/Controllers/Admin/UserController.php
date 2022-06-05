@@ -1,16 +1,26 @@
 <?php
 
-namespace App\Http\Controllers\admincontroller;
+namespace App\Http\Controllers\Admin;
 
 use App\Models\adduser;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use App\Http\Controllers\Controller;
 use RealRashid\SweetAlert\Facades\Alert;
-
-class usercontroller extends Controller
+use PDF;
+class UserController extends Controller
 {
-    public function adduser(Request $request)
+    // for view data of user page
+    public function index()
+    {
+        $shows = adduser::get();
+        return view('admin.UserManagement.Users.list')->with(compact('shows'));
+    }
+    public function addForm()
+    {
+        return view('admin.UserManagement.Users.add');
+    }
+    public function addUser(Request $request)
     {
         //  return $request;
         $data = $request->all();
@@ -50,12 +60,17 @@ class usercontroller extends Controller
         $adduser->save();
         return redirect('/addusers')->with('flash_message_success', 'product Added Successfully!!');
     }
-// for view data of user page
-public function viewUser()
-{
-    $shows = adduser::get();
-    return view('admin.usermanagment.view_User')->with(compact('shows'));
-}
 
 
+    public function ExportPDF()
+    {
+        $data = [
+            'title' => 'Welcome to ItSolutionStuff.com',
+            'date' => date('m/d/Y')
+        ];
+
+        $pdf = PDF::loadView('admin.UserManagement.pdf', $data);
+
+        return $pdf->download('itsolutionstuff.pdf');
+    }
 }

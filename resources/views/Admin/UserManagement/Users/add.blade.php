@@ -1,4 +1,4 @@
-@extends('admin.layouts.master')
+@extends('Admin.layouts.master')
 @section('content')
     <!-- partial -->
 
@@ -16,8 +16,7 @@
                 </ol>
             </nav> --}}
             </div>
-            <form method="POST" autocomplete="off" enctype="multipart/form-data" action="{{url('/adduser')}}"
-            > {{ csrf_field() }}
+            <form method="POST" autocomplete="off" enctype="multipart/form-data" action=""> {{ csrf_field() }}
             <div class="row">
                 <div class="col-12 grid-margin stretch-card">
                     <div class="card">

@@ -1,8 +1,9 @@
 <?php
 
-use App\Http\Controllers\admincontroller\usercontroller;
+use App\Http\Controllers\Admin\UserController;
 use App\Models\adduser;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Admin\DashboardController;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,21 +19,33 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return redirect('/dashboard');
 });
+Route::group(array('prefix' => 'dashboard'), function () {
+    Route::get('/',[DashboardController::class, 'index']);
 
-Route::get('/dashboard', function () {
-    return view('admin.dashboard');
-});
-Route::get('/adduser', function () {
-    return view('admin.usermanagment.add_user');
+    Route::group(array('prefix' => 'user'), function () {
+        Route::get('list',[UserController::class, 'index']);
+        Route::get('add',[UserController::class, 'addForm']);
+        Route::POST('add', [UserController::class, 'addUser']);
+        Route::get('pdf', [UserController::class, 'ExportPDF']);
+
+    });
 });
 
-Route::POST('/adduser', [usercontroller::class, 'adduser']);
+
+/*Route::get('/dashboard', function () {
+    return view('Admin.dashboard');
+});*/
+/*Route::get('/adduser', function () {
+    return view('Admin.UserManagement.add_user');
+});*/
+
+//Route::get('/viewUser', [UserController::class, 'viewUser']);
+//Route::POST('/adduser', [UserController::class, 'adduser']);
 
 Route::get('/addroles', function () {
-    return view('admin.usermanagment.add_Roles');
+    return view('Admin.UserManagement.add_Roles');
 });
 Route::get('/addpermission', function () {
-   return view('admin.usermanagment.Addsalescommission');
+   return view('Admin.UserManagement.Addsalescommission');
 });
 
-Route::get('/viewUser', [usercontroller::class, 'viewUser']);

@@ -1,4 +1,4 @@
-@extends('admin.layouts.master')
+@extends('Admin.layouts.master')
 @section('content')
     <!-- partial -->
 
@@ -24,12 +24,12 @@
                     </div>
                     <div class="col-2">
                         <div class="btn-group">
-                            
+
                             <div class="buttonexport" id="buttonlist">
                                 <button type="button" style="background-color: #392c70; border: none; border-radius: 8px;">
-                                    <a class="btn btn-add" style="color:#fff"href="/adduser">
-                                        <i class="fa fa-plus" style="color:white"></i>Add Users</button>
-                                </a>
+                                    <a class="btn btn-add" style="color:#fff" href="{{ URL::to('dashboard/user/add') }}">
+                                        <i class="fa fa-plus" style="color:white"></i>Add Users </a></button>
+
                             </div>
                         </div>
 
