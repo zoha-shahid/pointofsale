@@ -6,14 +6,18 @@
                 border: 1px solid;
                 text-align: center;
             }
+            table {
+                border-collapse: collapse;
+            }
         </style>
+
     </head>
     <body style="padding: 3rem">
         <h1 style="text-align: center;color: #3b3b86;">Website  Name</h1>
         <h4> All Users</h4><br />
         <table width="100%"  >
             <thead>
-                <tr width="100%">
+                <tr width="100%" style="background-color:#3b3b86;color: white; ">
                     <th>Sr#.</th>
                     <th>Username</th>
                     <th>Name</th>
