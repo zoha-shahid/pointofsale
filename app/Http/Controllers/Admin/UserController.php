@@ -58,7 +58,7 @@ class UserController extends Controller
         $adduser->Permanent_Address= $data['Permanent_Address'];
         $adduser->Current_Address = $data['Current_Address'];
         $adduser->save();
-        return redirect('/addusers')->with('flash_message_success', 'product Added Successfully!!');
+        return redirect('/dashboard/user/list')->with('flash_message_success', 'product Added Successfully!!');
     }
 
 
@@ -69,7 +69,7 @@ class UserController extends Controller
             'date' => date('m/d/Y')
         ];
 
-        $pdf = PDF::loadView('admin.UserManagement.pdf', $data);
+        $pdf = PDF::loadView('admin.UserManagement.Users.pdf', $data);
 
         return $pdf->download('itsolutionstuff.pdf');
     }
