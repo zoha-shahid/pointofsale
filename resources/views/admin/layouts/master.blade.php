@@ -5,6 +5,9 @@
         @yield("content")
         @include('admin.layouts.footer')
       </div>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+<link type="text/css" rel="stylesheet" href="{{ mix('css/app.css') }}">
 {{-- jqurey for the select all work for add role page --}}
 <script>
     $("#check_all").change(function(){
@@ -118,6 +121,62 @@
         }
         if($(".checkunit:checked").length == $(".checkunit").length){
             $("#check_unit").prop("checked",true)
+        }
+    })
+</script>
+{{-- for catrgory --}}
+<script>
+    $("#check_Category").change(function(){
+        $(".checkCategory").prop("checked", $(this).prop("checked"))
+    })
+    $(".checkCategory").change(function(){
+        if($(this).prop("checked")==false){
+            $("#check_Category").prop("checked",false)
+        }
+        if($(".checkCategory:checked").length == $(".checkCategory").length){
+            $("#check_Category").prop("checked",true)
+        }
+    })
+</script>
+{{-- for report --}}
+<script>
+    $("#check_Report").change(function(){
+        $(".checkreport").prop("checked", $(this).prop("checked"))
+    })
+    $(".checkreport").change(function(){
+        if($(this).prop("checked")==false){
+            $("#check_Report").prop("checked",false)
+        }
+        if($(".checkreport:checked").length == $(".checkreport").length){
+            $("#check_Report").prop("checked",true)
+        }
+    })
+</script>
+{{-- for Settings --}}
+<script>
+    $("#check_Settings").change(function(){
+        $(".checkSettings").prop("checked", $(this).prop("checked"))
+    })
+    $(".checkSettings").change(function(){
+        if($(this).prop("checked")==false){
+            $("#check_Settings").prop("checked",false)
+        }
+        if($(".checkSettings:checked").length == $(".checkSettings").length){
+            $("#check_Settings").prop("checked",true)
+        }
+    })
+</script>
+{{-- for other --}}
+<script>
+    $("#check_Others").change(function(){
+        $(".checkOthers").prop("checked", $(this).prop("checked"))
+    })
+    $(".checkOthers").change(function(){
+        if($(this).prop("checked")==false){
+            $("#check_Others").prop("checked",false)
+        }
+        if($(".checkOthers:checked").length == $(".checkOthers").length){
+            $("#check_Others").prop("checked",true)
         }
     })
 </script>

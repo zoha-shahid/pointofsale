@@ -49,7 +49,8 @@
                                             <div class="col-md-4">
                                                 <div class="checkbox">
                                                     <label>
-                                                        <input type="checkbox" class="check_all input-icheck">Select all
+                                                        <input type="checkbox" id="check_Others"> Select all
+                                                        {{-- <input type="checkbox" class="check_all input-icheck">Select all --}}
                                                     </label>
                                                 </div>
                                             </div>
@@ -58,10 +59,12 @@
                                                 <div class="col-md-12">
                                                     <div class="checkbox">
                                                         <label>
-                                                            <input class="input-icheck" name="permissions[]"
+                                                            <input class="checkOthers" name="permissions[]" type="checkbox"
+                                                            value="view_export_buttons"> View export to  buttons (csv/excel/print/pdf) on tables
+                                                            {{-- <input class="input-icheck" name="permissions[]"
                                                                 type="checkbox" value="view_export_buttons"> View export to
                                                             buttons
-                                                            (csv/excel/print/pdf) on tables
+                                                            (csv/excel/print/pdf) on tables --}}
                                                         </label>
                                                     </div>
                                                 </div>
@@ -1166,14 +1169,15 @@
                                     <hr>
                                     {{-- end --}}
                                     {{-- next --}}
-                                    <div class="row check_group">   
+                                    <div class="row check_group">
                                         <div class="col-md-2">
                                             <h4>Category</h4>
                                         </div>
                                         <div class="col-md-2">
                                             <div class="checkbox">
                                                 <label>
-                                                    <input type="checkbox" class="check_all input-icheck"> Select all
+                                                    <input type="checkbox" id="check_Category"> Select all
+                                                    {{-- <input type="checkbox" class="check_all input-icheck"> Select all --}}
                                                 </label>
                                             </div>
                                         </div>
@@ -1181,32 +1185,40 @@
                                             <div class="col-md-12">
                                                 <div class="checkbox">
                                                     <label>
-                                                        <input class="input-icheck" name="permissions[]" type="checkbox"
-                                                            value="category.view"> View category
+                                                        <input class="checkCategory" name="permissions[]" type="checkbox"
+                                                        value="category.view"> View category
+                                                        {{-- <input class="input-icheck" name="permissions[]" type="checkbox"
+                                                            value="category.view"> View category --}}
                                                     </label>
                                                 </div>
                                             </div>
                                             <div class="col-md-12">
                                                 <div class="checkbox">
                                                     <label>
-                                                        <input class="input-icheck" name="permissions[]" type="checkbox"
-                                                            value="category.create"> Add category
+                                                        <input class="checkCategory" name="permissions[]" type="checkbox"
+                                                        value="category.create"> Add category
+                                                        {{-- <input class="input-icheck" name="permissions[]" type="checkbox"
+                                                            value="category.create"> Add category --}}
                                                     </label>
                                                 </div>
                                             </div>
                                             <div class="col-md-12">
                                                 <div class="checkbox">
                                                     <label>
-                                                        <input class="input-icheck" name="permissions[]" type="checkbox"
-                                                            value="category.update"> Edit category
+                                                        <input class="checkCategory" name="permissions[]" type="checkbox"
+                                                        value="category.update"> Edit category
+                                                        {{-- <input class="input-icheck" name="permissions[]" type="checkbox"
+                                                            value="category.update"> Edit category --}}
                                                     </label>
                                                 </div>
                                             </div>
                                             <div class="col-md-12">
                                                 <div class="checkbox">
                                                     <label>
-                                                        <input class="input-icheck" name="permissions[]" type="checkbox"
-                                                            value="category.delete"> Delete category
+                                                        <input class="checkCategory" name="permissions[]" type="checkbox"
+                                                        value="category.delete"> Delete category
+                                                        {{-- <input class="input-icheck" name="permissions[]" type="checkbox"
+                                                            value="category.delete"> Delete category --}}
                                                     </label>
                                                 </div>
                                             </div>
@@ -1220,7 +1232,8 @@
                                         <div class="col-md-2">
                                             <div class="checkbox">
                                                 <label>
-                                                    <input type="checkbox" class="check_all input-icheck"> Select all
+                                                    <input type="checkbox" id="check_Report"> Select all
+                                                    {{-- <input type="checkbox" class="check_all input-icheck"> Select all --}}
                                                 </label>
                                             </div>
                                         </div>
@@ -1228,69 +1241,86 @@
                                             <div class="col-md-12">
                                                 <div class="checkbox">
                                                     <label>
-                                                        <input class="input-icheck" name="permissions[]" type="checkbox"
+                                                        <input class="checkreport" name="permissions[]" type="checkbox"
+                                                        value="purchase_n_sell_report.view"> View purchase &amp; sell report
+                                                        {{-- <input class="input-icheck" name="permissions[]" type="checkbox"
                                                             value="purchase_n_sell_report.view"> View purchase &amp; sell
-                                                        report
+                                                        report --}}
                                                     </label>
                                                 </div>
                                             </div>
                                             <div class="col-md-12">
                                                 <div class="checkbox">
                                                     <label>
-                                                        <input class="input-icheck" name="permissions[]" type="checkbox"
-                                                            value="tax_report.view"> View Tax report
+                                                        <input class="checkreport" name="permissions[]" type="checkbox"
+                                                        value="tax_report.view"> View Tax report
+                                                        {{-- <input class="input-icheck" name="permissions[]" type="checkbox"
+                                                            value="tax_report.view"> View Tax report --}}
                                                     </label>
                                                 </div>
                                             </div>
                                             <div class="col-md-12">
                                                 <div class="checkbox">
                                                     <label>
-                                                        <input class="input-icheck" name="permissions[]" type="checkbox"
+                                                        <input class="checkreport" name="permissions[]" type="checkbox"
+                                                        value="contacts_report.view">  View Supplier &amp; Customer report
+                                                        {{-- <input class="input-icheck" name="permissions[]" type="checkbox"
                                                             value="contacts_report.view"> View Supplier &amp; Customer
-                                                        report
+                                                        report --}}
                                                     </label>
                                                 </div>
                                             </div>
                                             <div class="col-md-12">
                                                 <div class="checkbox">
                                                     <label>
-                                                        <input class="input-icheck" name="permissions[]" type="checkbox"
-                                                            value="expense_report.view"> View expense report
+                                                        <input class="checkreport" name="permissions[]" type="checkbox"
+                                                        value="expense_report.view">   View expense report
+                                                        {{-- <input class="input-icheck" name="permissions[]" type="checkbox"
+                                                            value="expense_report.view"> View expense report --}}
                                                     </label>
                                                 </div>
                                             </div>
                                             <div class="col-md-12">
                                                 <div class="checkbox">
                                                     <label>
-                                                        <input class="input-icheck" name="permissions[]" type="checkbox"
-                                                            value="profit_loss_report.view"> View profit/loss report
+                                                        <input class="checkreport" name="permissions[]" type="checkbox"
+                                                        value="profit_loss_report.view">  View profit/loss report
+                                                        {{-- <input class="input-icheck" name="permissions[]" type="checkbox"
+                                                            value="profit_loss_report.view"> View profit/loss report --}}
                                                     </label>
                                                 </div>
                                             </div>
                                             <div class="col-md-12">
                                                 <div class="checkbox">
                                                     <label>
-                                                        <input class="input-icheck" name="permissions[]" type="checkbox"
+                                                        <input class="checkreport" name="permissions[]" type="checkbox"
+                                                        value="stock_report.view">  View stock report, stock adjustment report
+                                                        &amp; stock expiry report
+                                                        {{-- <input class="input-icheck" name="permissions[]" type="checkbox"
                                                             value="stock_report.view"> View stock report, stock adjustment
                                                         report
-                                                        &amp; stock expiry report
+                                                        &amp; stock expiry report --}}
                                                     </label>
                                                 </div>
                                             </div>
                                             <div class="col-md-12">
                                                 <div class="checkbox">
                                                     <label>
-                                                        <input class="input-icheck" name="permissions[]" type="checkbox"
+                                                        <input class="checkreport" name="permissions[]" type="checkbox"
+                                                        value="trending_product_report.view"> View trending product
+                                                        {{-- <input class="input-icheck" name="permissions[]" type="checkbox"
                                                             value="trending_product_report.view"> View trending product
-                                                        report
+                                                        report --}}
                                                     </label>
                                                 </div>
                                             </div>
                                             <div class="col-md-12">
                                                 <div class="checkbox">
                                                     <label>
-                                                        <input class="input-icheck" name="permissions[]" type="checkbox"
-                                                            value="register_report.view"> View register report
+                                                        <input class="checkreport" name="permissions[]" type="checkbox"
+                                                        value="register_report.view"> View register report
+                                                        {{-- <input class="input-icheck" name="permissions[]" type="checkbox"
+                                                            value="register_report.view"> View register report --}}
                                                     </label>
                                                 </div>
                                             </div>
@@ -1298,17 +1328,21 @@
                                             <div class="col-md-12">
                                                 <div class="checkbox">
                                                     <label>
-                                                        <input class="input-icheck" name="permissions[]" type="checkbox"
+                                                        <input class="checkreport" name="permissions[]" type="checkbox"
+                                                        value="sales_representative.view""> View sales representative
+                                                        {{-- <input class="input-icheck" name="permissions[]" type="checkbox"
                                                             value="sales_representative.view"> View sales representative
-                                                        report
+                                                        report --}}
                                                     </label>
                                                 </div>
                                             </div>
                                             <div class="col-md-12">
                                                 <div class="checkbox">
                                                     <label>
-                                                        <input class="input-icheck" name="permissions[]" type="checkbox"
-                                                            value="view_product_stock_value"> View product stock value
+                                                        <input class="checkreport" name="permissions[]" type="checkbox"
+                                                        value="view_product_stock_value"> View product stock value
+                                                        {{-- <input class="input-icheck" name="permissions[]" type="checkbox"
+                                                            value="view_product_stock_value"> View product stock value --}}
                                                     </label>
                                                 </div>
                                             </div>
@@ -1323,7 +1357,8 @@
                                         <div class="col-md-2">
                                             <div class="checkbox">
                                                 <label>
-                                                    <input type="checkbox" class="check_all input-icheck"> Select all
+                                                    <input type="checkbox" id="check_Settings"> Select all
+                                                    {{-- <input type="checkbox" class="check_all input-icheck"> Select all --}}
                                                 </label>
                                             </div>
                                         </div>
@@ -1331,33 +1366,41 @@
                                             <div class="col-md-12">
                                                 <div class="checkbox">
                                                     <label>
-                                                        <input class="input-icheck" name="permissions[]" type="checkbox"
-                                                            value="business_settings.access"> Access business settings
+                                                        <input class="checkSettings" name="permissions[]" type="checkbox"
+                                                        value="business_settings.access"> Access business settings
+                                                        {{-- <input class="input-icheck" name="permissions[]" type="checkbox"
+                                                            value="business_settings.access"> Access business settings --}}
                                                     </label>
                                                 </div>
                                             </div>
                                             <div class="col-md-12">
                                                 <div class="checkbox">
                                                     <label>
-                                                        <input class="input-icheck" name="permissions[]" type="checkbox"
-                                                            value="barcode_settings.access"> Access barcode settings
+                                                        <input class="checkSettings" name="permissions[]" type="checkbox"
+                                                        value="barcode_settings.access"> Access barcode settings
+                                                        {{-- <input class="input-icheck" name="permissions[]" type="checkbox"
+                                                            value="barcode_settings.access"> Access barcode settings --}}
                                                     </label>
                                                 </div>
                                             </div>
                                             <div class="col-md-12">
                                                 <div class="checkbox">
                                                     <label>
-                                                        <input class="input-icheck" name="permissions[]" type="checkbox"
-                                                            value="invoice_settings.access"> Access invoice settings
+                                                        <input class="checkSettings" name="permissions[]" type="checkbox"
+                                                        value="invoice_settings.access"> Access invoice settings
+                                                        {{-- <input class="input-icheck" name="permissions[]" type="checkbox"
+                                                            value="invoice_settings.access"> Access invoice settings --}}
                                                     </label>
                                                 </div>
                                             </div>
                                             <div class="col-md-12">
                                                 <div class="checkbox">
                                                     <label>
-                                                        <input class="input-icheck" name="permissions[]" type="checkbox"
+                                                        <input class="checkSettings" name="permissions[]" type="checkbox"
+                                                        value="access_printers">  Access printers
+                                                        {{-- <input class="input-icheck" name="permissions[]" type="checkbox"
                                                             value="access_printers">
-                                                        Access printers
+                                                        Access printers --}}
                                                     </label>
                                                 </div>
                                             </div>
@@ -1434,9 +1477,11 @@
                                             <div class="col-md-12">
                                                 <div class="checkbox">
                                                     <label>
-                                                        <input class="input-icheck" checked="checked"
+                                                        <input class="input-icheck status" name="permissions[]"type="hidden" value="not_view_data">
+                                                        <input class="input-icheck status" name="permissions[]"type="checkbox" value="view_data"> View Home data
+                                                        {{-- <input class="input-icheck" checked="checked"
                                                             name="permissions[]" type="checkbox" value="dashboard.data">
-                                                        View Home data
+                                                        View Home data --}}
                                                     </label>
                                                 </div>
                                             </div>
@@ -1453,8 +1498,9 @@
                                             <div class="col-md-12">
                                                 <div class="checkbox">
                                                     <label>
-                                                        <input class="input-icheck" name="permissions[]" type="checkbox"
-                                                            value="account.access"> Access Accounts
+                                                        <input class="input-icheck status" name="permissions_account.access[]"type="checkbox" value="account.access">  Access Accounts
+                                                        {{-- <input class="input-icheck" name="permissions[]" type="checkbox"
+                                                            value="account.access"> Access Accounts --}}
                                                     </label>
                                                 </div>
                                             </div>
@@ -1462,8 +1508,9 @@
                                             <div class="col-md-12">
                                                 <div class="checkbox">
                                                     <label>
-                                                        <input class="input-icheck" name="permissions[]" type="checkbox"
-                                                            value="edit_account_transaction"> Edit account transaction
+                                                        <input class="input-icheck status" name="permissions_account.access[]"type="checkbox" value="edit_account_transaction">  Edit account transaction
+                                                        {{-- <input class="input-icheck" name="permissions[]" type="checkbox"
+                                                            value="edit_account_transaction"> Edit account transaction --}}
                                                     </label>
                                                 </div>
                                             </div>
@@ -1471,8 +1518,9 @@
                                             <div class="col-md-12">
                                                 <div class="checkbox">
                                                     <label>
-                                                        <input class="input-icheck" name="permissions[]" type="checkbox"
-                                                            value="delete_account_transaction"> Delete account transaction
+                                                        <input class="input-icheck status" name="permissions_account.access[]"type="checkbox" value="delete_account_transaction">  Delete account transaction
+                                                        {{-- <input class="input-icheck" name="permissions[]" type="checkbox"
+                                                            value="delete_account_transaction"> Delete account transaction --}}
                                                     </label>
                                                 </div>
                                             </div>
@@ -1489,9 +1537,11 @@
                                             <div class="col-md-12">
                                                 <div class="checkbox">
                                                     <label>
-                                                        <input class="input-icheck" checked="checked"
+                                                        <input class="input-icheck status" name="permissionscheck[]"type="hidden" value="not_access_default_selling_price">
+<input class="input-icheck status" name="permissionscheck[]"type="checkbox" value="access_default_selling_price"> Default Selling Price
+                                                        {{-- <input class="input-icheck" checked="checked"
                                                             name="permissions[]" type="checkbox"
-                                                            value="access_default_selling_price"> Default Selling Price
+                                                            value="access_default_selling_price"> Default Selling Price --}}
                                                     </label>
                                                 </div>
                                             </div>
@@ -1509,11 +1559,12 @@
                                             <div class="col-md-12">
                                                 <div class="checkbox">
                                                     <label>
-                                                        <input class="input-icheck" name="permissions[]" type="checkbox"
-                                                            value="asset.view"> View Asset
+                                                        {{-- <input class="input-icheck" name="permissions[]" type="checkbox"
+                                                            value="asset.view"> View Asset --}}
+ <input class="input-icheck status" name="permissions_Asset[]"type="hidden" value="not_asset.view"">
+<input class="input-icheck status" name="permissions_Asset[]"type="checkbox" value="asset.view""> View Asset
                                                     </label>
                                                 </div>
-
                                             </div>
                                         </div>
                                     </div>
