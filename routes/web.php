@@ -34,6 +34,7 @@ Route::group(array('prefix' => 'dashboard'), function () {
     Route::group(['prefix' =>'Role'], function(){
         Route::get('add',[RoleController::class, 'index']);
         Route::post('add',[RoleController::class, 'addForm']);
+        Route::get('list',[RoleController::class, 'viewRole']);
     });
 });
 
@@ -52,11 +53,9 @@ Route::get('/addpermission', function () {
    return view('Admin.UserManagement.Addsalescommission');
 });
 
-<<<<<<< Updated upstream
 
 
-=======
  // nim
  Route::get('edit/{id}',[UserController::class, 'editdata']);
  Route::post('edit/{id}',[UserController::class, 'usereditdata']);
->>>>>>> Stashed changes
+

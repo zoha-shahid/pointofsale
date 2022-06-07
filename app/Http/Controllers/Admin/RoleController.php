@@ -21,4 +21,9 @@ $input['Role'] = $request->input('Role');
 Role::create($input);
 return redirect()->back();
 }
+public function viewRole()
+{
+
+    return view('Admin.UserManagement.Roles.list');
+}
 }

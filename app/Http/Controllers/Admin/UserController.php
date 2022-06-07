@@ -82,10 +82,6 @@ class UserController extends Controller
     public  function ExportCSV(){
         return Excel::download(new UsersExport, 'users.csv');
     }
-<<<<<<< Updated upstream
-
-
-=======
     public function editdata($id){
         $shows= adduser::find($id);
         // dd($shows);
@@ -135,5 +131,5 @@ class UserController extends Controller
 
             return redirect('/list');
     }
->>>>>>> Stashed changes
+
 }
