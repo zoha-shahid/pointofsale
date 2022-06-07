@@ -40,7 +40,7 @@ Route::group(array('prefix' => 'dashboard'), function () {
     });
     Route::group(['prefix' =>'Sales'], function(){
         Route::get('add',[SalesController::class, 'index']);
-
+        Route::post('add',[SalesController::class, 'addForm']);
     });
 });
 

@@ -8,6 +8,8 @@
                     Add sales commission agent
                 </h3>
             </div>
+            {{-- <form method="POST" action="/dashboard/Sales/add"> --}}
+                <form method="POST" autocomplete="off" enctype="multipart/form-data" action=""> {{ csrf_field() }}
             <div class="row">
                 <div class="col-12 grid-margin stretch-card">
                     <div class="card">
@@ -17,7 +19,7 @@
                                     <div class="col-md-2">
                                         <div class="form-group">
                                             <label for="surname">Prefix:</label>
-                                            <input class="form-control" placeholder="Mr / Mrs / Miss" name="surname"
+                                            <input class="form-control" placeholder="Mr / Mrs / Miss" name="Prefix"
                                                 type="text" id="surname">
                                         </div>
                                     </div>
@@ -68,7 +70,7 @@
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <label for="email">Sales Commission Percentage (%):</label>
-                                            <input class="form-control" required placeholder="Sales Commission Percentage (%):" name="Commission Percentage "
+                                            <input class="form-control" required placeholder="Sales Commission Percentage (%):" name="Commission_Percentage"
                                                 type="text" id="Commission Percentage ">
                                         </div>
                                     </div>
@@ -80,10 +82,11 @@
                                     <div class="col-md-4">
                                         <button type="submit" class="btn btn-light pull-left">Cancel</button>
                                      </div>
-                                    </div>
+                                    </form>  </div>
                         </div>
                         </div>
                         {{-- end --}}
+
 
 
 
