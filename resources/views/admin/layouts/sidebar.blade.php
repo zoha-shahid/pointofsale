@@ -37,7 +37,7 @@
           <ul class="nav flex-column sub-menu">
             <li class="nav-item d-none d-lg-block"> <a class="nav-link" href="{{ URL::to('dashboard/user/list') }}">Users</a></li>
             <li class="nav-item"> <a class="nav-link" href="{{ URL::to('dashboard/Role/list') }}"> Roles</a></li>
-            <li class="nav-item d-none d-lg-block"> <a class="nav-link" href="/addpermission">Sales Commission Agents</a></li>
+            <li class="nav-item d-none d-lg-block"> <a class="nav-link" href="{{ URL::to('dashboard/Sales/add') }}">Sales Commission Agents</a></li>
           </ul>
         </div>
       </li>

@@ -2,9 +2,11 @@
 
 use App\Http\Controllers\Admin\UserController;
 use App\Http\Controllers\Admin\RoleController;
+use App\Http\Controllers\Admin\SalesController;
 use App\Models\User;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\DashboardController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -36,6 +38,10 @@ Route::group(array('prefix' => 'dashboard'), function () {
         Route::post('add',[RoleController::class, 'addForm']);
         Route::get('list',[RoleController::class, 'viewRole']);
     });
+    Route::group(['prefix' =>'Sales'], function(){
+        Route::get('add',[SalesController::class, 'index']);
+
+    });
 });
 
 
@@ -49,9 +55,7 @@ Route::group(array('prefix' => 'dashboard'), function () {
 
 
 
-Route::get('/addpermission', function () {
-   return view('Admin.UserManagement.Addsalescommission');
-});
+
 
 
 

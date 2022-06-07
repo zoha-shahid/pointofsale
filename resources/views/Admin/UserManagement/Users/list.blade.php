@@ -1,8 +1,6 @@
 @extends('Admin.layouts.master')
 @section('content')
     <!-- partial -->
-
-      <!-- partial -->
       <div class="main-panel">
         <div class="content-wrapper">
           <div class="page-header">
