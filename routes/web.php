@@ -51,5 +51,11 @@ Route::get('/addpermission', function () {
    return view('Admin.UserManagement.Addsalescommission');
 });
 
+<<<<<<< Updated upstream
 
 
+=======
+ // nim
+ Route::get('edit/{id}',[UserController::class, 'editdata']);
+ Route::post('edit/{id}',[UserController::class, 'usereditdata']);
+>>>>>>> Stashed changes
