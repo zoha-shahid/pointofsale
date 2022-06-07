@@ -2,19 +2,21 @@
 
 namespace App\Http\Controllers\Admin;
 
-use App\Models\adduser;
+use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use App\Http\Controllers\Controller;
 use RealRashid\SweetAlert\Facades\Alert;
 use PDF,Excel;
 use App\Exports\UsersExport;
+use FontLib\Table\Type\post;
+
 class UserController extends Controller
 {
     // for view data of user page
     public function index()
     {
-        $shows = adduser::get();
+        $shows = User::get();
         return view('admin.UserManagement.Users.list')->with(compact('shows'));
     }
     public function addForm()
@@ -26,7 +28,7 @@ class UserController extends Controller
         //  return $request;
         $data = $request->all();
         //  dd($data);
-        $adduser = new adduser;
+        $adduser = new User;
         $adduser->Prefix = $data['Prefix'];
         $adduser->First_name= $data['First_name'];
         $adduser->Last_name = $data['Last_name'];
@@ -65,7 +67,7 @@ class UserController extends Controller
 
     public function ExportPDF()
     {
-        $data = adduser::get()->toArray();
+        $data = User::get()->toArray();
         $pdf = PDF::loadView('admin.UserManagement.Users.pdf', compact('data'));
         return $pdf->download('itsolutionstuff.pdf');
     }
@@ -77,4 +79,6 @@ class UserController extends Controller
     public  function ExportCSV(){
         return Excel::download(new UsersExport, 'users.csv');
     }
+
+
 }

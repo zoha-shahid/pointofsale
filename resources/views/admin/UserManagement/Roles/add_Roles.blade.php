@@ -12,7 +12,8 @@
             </h3> --}}
             </div>
             <div class="box-body">
-                <form method="POST">
+                <form method="POST" action="">
+                    @csrf
                     <div class="row">
                         <div class="col-12 grid-margin stretch-card">
                             <div class="card">
@@ -59,8 +60,9 @@
                                                 <div class="col-md-12">
                                                     <div class="checkbox">
                                                         <label>
-                                                            <input class="checkOthers" name="permissions[]" type="checkbox"
-                                                            value="view_export_buttons"> View export to  buttons (csv/excel/print/pdf) on tables
+                                                            <input class="checkOthers" name="permissions[]"
+                                                                type="checkbox" value="view_export_buttons"> View export to
+                                                            buttons (csv/excel/print/pdf) on tables
                                                             {{-- <input class="input-icheck" name="permissions[]"
                                                                 type="checkbox" value="view_export_buttons"> View export to
                                                             buttons
@@ -81,7 +83,7 @@
                                         <div class="col-md-2">
                                             <div class="checkbox">
                                                 <label>
-                                                    <input type="checkbox" id="check_it"> Select all
+                                                    <input type="checkbox" id="check_it" name="user">Select all
                                                     {{-- <input type="checkbox" class="check_all input-icheck"> Select all --}}
                                                 </label>
                                             </div>
@@ -90,7 +92,7 @@
                                             <div class="col-md-12">
                                                 <div class="checkbox">
                                                     <label>
-                                                        <input class="check" name="permissions[]" type="checkbox"
+                                                        <input class="check" name="category[]" type="checkbox"
                                                             value="user.view"> View user
                                                     </label>
                                                 </div>
@@ -100,7 +102,7 @@
                                                     <label>
                                                         {{-- <input class="input-icheck" name="permissions[]" type="checkbox"
                                                     value="user.create"> Add user --}}
-                                                        <input class="check" name="permissions[]" type="checkbox"
+                                                        <input class="check" name="category[]" type="checkbox"
                                                             value="user.create"> Add user
                                                     </label>
                                                 </div>
@@ -110,7 +112,7 @@
                                                     <label>
                                                         {{-- <input class="input-icheck" name="permissions[]" type="checkbox"
                                                     value="user.update"> Edit user --}}
-                                                        <input class="check" name="permissions[]" type="checkbox"
+                                                        <input class="check" name="category[]" type="checkbox"
                                                             value="user.update"> Edit user
                                                     </label>
                                                 </div>
@@ -120,7 +122,7 @@
                                                     <label>
                                                         {{-- <input class="input-icheck" name="permissions[]" type="checkbox"
                                                     value="user.delete"> Delete user --}}
-                                                        <input class="check" name="permissions[]" type="checkbox"
+                                                        <input class="check" name="category[]" type="checkbox"
                                                             value="user.delete"> Delete user
                                                     </label>
                                                 </div>
@@ -145,7 +147,7 @@
                                             <div class="col-md-12">
                                                 <div class="checkbox">
                                                     <label>
-                                                        <input class="checkitem" name="permissions[]" type="checkbox"
+                                                        <input class="checkitem" name="category[]" type="checkbox"
                                                             value="user.view"> View role
 
                                                     </label>
@@ -154,7 +156,7 @@
                                             <div class="col-md-12">
                                                 <div class="checkbox">
                                                     <label>
-                                                        <input class="checkitem" name="permissions[]" type="checkbox"
+                                                        <input class="checkitem" name="category[]" type="checkbox"
                                                             value="user.create"> Add Role
                                                     </label>
                                                 </div>
@@ -162,7 +164,7 @@
                                             <div class="col-md-12">
                                                 <div class="checkbox">
                                                     <label>
-                                                        <input class="checkitem" name="permissions[]" type="checkbox"
+                                                        <input class="checkitem" name="category[]" type="checkbox"
                                                             value="user.update"> Edit Role
                                                     </label>
                                                 </div>
@@ -170,7 +172,7 @@
                                             <div class="col-md-12">
                                                 <div class="checkbox">
                                                     <label>
-                                                        <input class="checkitem" name="permissions[]" type="checkbox"
+                                                        <input class="checkitem" name="category[]" type="checkbox"
                                                             value="user.delete"> Delete role
                                                     </label>
                                                 </div>
@@ -548,7 +550,7 @@
                                                 <div class="checkbox">
                                                     <label>
                                                         <input class="checkposnow" name="permissions[]" type="checkbox"
-                                                        value="sell.view"> View POS sell
+                                                            value="sell.view"> View POS sell
                                                         {{-- <input class="input-icheck" name="permissions[]" type="checkbox"
                                                             value="sell.view"> View POS sell --}}
                                                     </label>
@@ -558,7 +560,7 @@
                                                 <div class="checkbox">
                                                     <label>
                                                         <input class="checkposnow" name="permissions[]" type="checkbox"
-                                                        value="sell.create"> Add POS sell
+                                                            value="sell.create"> Add POS sell
                                                         {{-- <input class="input-icheck" name="permissions[]" type="checkbox"
                                                             value="sell.create"> Add POS sell --}}
                                                     </label>
@@ -568,7 +570,7 @@
                                                 <div class="checkbox">
                                                     <label>
                                                         <input class="checkposnow" name="permissions[]" type="checkbox"
-                                                        value="sell.update"> Edit POS sell
+                                                            value="sell.update"> Edit POS sell
                                                         {{-- <input class="input-icheck" name="permissions[]" type="checkbox"
                                                             value="sell.update"> Edit POS sell --}}
                                                     </label>
@@ -578,7 +580,7 @@
                                                 <div class="checkbox">
                                                     <label>
                                                         <input class="checkposnow" name="permissions[]" type="checkbox"
-                                                        value="sell.delete"> Delete POS sell
+                                                            value="sell.delete"> Delete POS sell
                                                         {{-- <input class="input-icheck" name="permissions[]" type="checkbox"
                                                             value="sell.delete"> Delete POS sell --}}
                                                     </label>
@@ -588,7 +590,8 @@
                                                 <div class="checkbox">
                                                     <label>
                                                         <input class="checkposnow" name="permissions[]" type="checkbox"
-                                                        value="edit_product_price_from_pos_screen">  Edit product price from POS screen
+                                                            value="edit_product_price_from_pos_screen"> Edit product price
+                                                        from POS screen
                                                         {{-- <input class="input-icheck" name="permissions[]" type="checkbox"
                                                             value="edit_product_price_from_pos_screen"> --}}
 
@@ -599,7 +602,8 @@
                                                 <div class="checkbox">
                                                     <label>
                                                         <input class="checkposnow" name="permissions[]" type="checkbox"
-                                                        value="edit_product_discount_from_pos_screen">   Edit product discount from POS screen
+                                                            value="edit_product_discount_from_pos_screen"> Edit product
+                                                        discount from POS screen
                                                         {{-- <input class="input-icheck" name="permissions[]" type="checkbox"
                                                             value="edit_product_discount_from_pos_screen">
                                                         Edit product discount from POS screen --}}
@@ -610,7 +614,7 @@
                                                 <div class="checkbox">
                                                     <label>
                                                         <input class="checkposnow" name="permissions[]" type="checkbox"
-                                                        value="print_invoice">   Print Invoice
+                                                            value="print_invoice"> Print Invoice
                                                         {{-- <input class="input-icheck" name="permissions[]" type="checkbox"
                                                             value="print_invoice">
                                                         Print Invoice --}}
@@ -973,7 +977,7 @@
                                                 <div class="checkbox">
                                                     <label>
                                                         <input class="checkcash" name="permissions[]" type="checkbox"
-                                                        value="view_cash_register"> View cash register
+                                                            value="view_cash_register"> View cash register
                                                         {{-- <input class="input-icheck" name="permissions[]" type="checkbox"
                                                             value="view_cash_register"> View cash register --}}
                                                     </label>
@@ -983,7 +987,7 @@
                                                 <div class="checkbox">
                                                     <label>
                                                         <input class="checkcash" name="permissions[]" type="checkbox"
-                                                        value="close_cash_register"> Close cash register
+                                                            value="close_cash_register"> Close cash register
                                                         {{-- <input class="input-icheck" name="permissions[]" type="checkbox"
                                                             value="close_cash_register"> Close cash register --}}
                                                     </label>
@@ -1013,7 +1017,7 @@
                                                 <div class="checkbox">
                                                     <label>
                                                         <input class="checkbrand" name="permissions[]" type="checkbox"
-                                                        value="brand.view"> View brand
+                                                            value="brand.view"> View brand
                                                         {{-- <input class="input-icheck" name="permissions[]" type="checkbox"
                                                             value="brand.view"> View brand --}}
                                                     </label>
@@ -1023,7 +1027,7 @@
                                                 <div class="checkbox">
                                                     <label>
                                                         <input class="checkbrand" name="permissions[]" type="checkbox"
-                                                        value="brand.creat"> Add brand
+                                                            value="brand.creat"> Add brand
                                                         {{-- <input class="input-icheck" name="permissions[]" type="checkbox"
                                                             value="brand.create"> Add brand --}}
                                                     </label>
@@ -1033,7 +1037,7 @@
                                                 <div class="checkbox">
                                                     <label>
                                                         <input class="checkbrand" name="permissions[]" type="checkbox"
-                                                        value="brand.update"> Edit brand
+                                                            value="brand.update"> Edit brand
                                                         {{-- <input class="input-icheck" name="permissions[]" type="checkbox"
                                                             value="brand.update"> Edit brand --}}
                                                     </label>
@@ -1043,7 +1047,7 @@
                                                 <div class="checkbox">
                                                     <label>
                                                         <input class="checkbrand" name="permissions[]" type="checkbox"
-                                                        value="brand.delete"> Delete brand
+                                                            value="brand.delete"> Delete brand
 
                                                     </label>
                                                 </div>
@@ -1070,7 +1074,7 @@
                                                 <div class="checkbox">
                                                     <label>
                                                         <input class="checkRate" name="permissions[]" type="checkbox"
-                                                        value="tax_rate.view"> View tax rate
+                                                            value="tax_rate.view"> View tax rate
                                                         {{-- <input class="input-icheck" name="permissions[]" type="checkbox"
                                                             value="tax_rate.view"> View tax rate --}}
                                                     </label>
@@ -1080,7 +1084,7 @@
                                                 <div class="checkbox">
                                                     <label>
                                                         <input class="checkRate" name="permissions[]" type="checkbox"
-                                                        value="tax_rate.create">Add tax rate
+                                                            value="tax_rate.create">Add tax rate
                                                         {{-- <input class="input-icheck" name="permissions[]" type="checkbox"
                                                             value="tax_rate.create"> Add tax rate --}}
                                                     </label>
@@ -1090,7 +1094,7 @@
                                                 <div class="checkbox">
                                                     <label>
                                                         <input class="checkRate" name="permissions[]" type="checkbox"
-                                                        value="tax_rate.update"> Edit tax rate
+                                                            value="tax_rate.update"> Edit tax rate
                                                         {{-- <input class="input-icheck" name="permissions[]" type="checkbox"
                                                             value="tax_rate.update"> Edit tax rate --}}
                                                     </label>
@@ -1100,7 +1104,7 @@
                                                 <div class="checkbox">
                                                     <label>
                                                         <input class="checkRate" name="permissions[]" type="checkbox"
-                                                        value="tax_rate.delete"> Delete tax rate
+                                                            value="tax_rate.delete"> Delete tax rate
                                                         {{-- <input class="input-icheck" name="permissions[]" type="checkbox"
                                                             value="tax_rate.delete"> Delete tax rate --}}
                                                     </label>
@@ -1128,7 +1132,7 @@
                                                 <div class="checkbox">
                                                     <label>
                                                         <input class="checkunit" name="permissions[]" type="checkbox"
-                                                        value="unit.view"> View unit
+                                                            value="unit.view"> View unit
                                                         {{-- <input class="input-icheck" name="permissions[]" type="checkbox"
                                                             value="unit.view"> View unit --}}
                                                     </label>
@@ -1138,7 +1142,7 @@
                                                 <div class="checkbox">
                                                     <label>
                                                         <input class="checkunit" name="permissions[]" type="checkbox"
-                                                        value="unit.create"> Add unit
+                                                            value="unit.create"> Add unit
                                                         {{-- <input class="input-icheck" name="permissions[]" type="checkbox"
                                                             value="unit.create"> Add unit --}}
                                                     </label>
@@ -1148,7 +1152,7 @@
                                                 <div class="checkunit">
                                                     <label>
                                                         <input class="checkunit" name="permissions[]" type="checkbox"
-                                                        value="unit.update"> Edit unit
+                                                            value="unit.update"> Edit unit
                                                         {{-- <input class="input-icheck" name="permissions[]" type="checkbox"
                                                             value="unit.update"> Edit unit --}}
                                                     </label>
@@ -1158,7 +1162,7 @@
                                                 <div class="checkbox">
                                                     <label>
                                                         <input class="checkunit" name="permissions[]" type="checkbox"
-                                                        value="unit.delete"> Delete unit
+                                                            value="unit.delete"> Delete unit
                                                         {{-- <input class="input-icheck" name="permissions[]" type="checkbox"
                                                             value="unit.delete"> Delete unit --}}
                                                     </label>
@@ -1186,7 +1190,7 @@
                                                 <div class="checkbox">
                                                     <label>
                                                         <input class="checkCategory" name="permissions[]" type="checkbox"
-                                                        value="category.view"> View category
+                                                            value="category.view"> View category
                                                         {{-- <input class="input-icheck" name="permissions[]" type="checkbox"
                                                             value="category.view"> View category --}}
                                                     </label>
@@ -1196,7 +1200,7 @@
                                                 <div class="checkbox">
                                                     <label>
                                                         <input class="checkCategory" name="permissions[]" type="checkbox"
-                                                        value="category.create"> Add category
+                                                            value="category.create"> Add category
                                                         {{-- <input class="input-icheck" name="permissions[]" type="checkbox"
                                                             value="category.create"> Add category --}}
                                                     </label>
@@ -1206,7 +1210,7 @@
                                                 <div class="checkbox">
                                                     <label>
                                                         <input class="checkCategory" name="permissions[]" type="checkbox"
-                                                        value="category.update"> Edit category
+                                                            value="category.update"> Edit category
                                                         {{-- <input class="input-icheck" name="permissions[]" type="checkbox"
                                                             value="category.update"> Edit category --}}
                                                     </label>
@@ -1216,7 +1220,7 @@
                                                 <div class="checkbox">
                                                     <label>
                                                         <input class="checkCategory" name="permissions[]" type="checkbox"
-                                                        value="category.delete"> Delete category
+                                                            value="category.delete"> Delete category
                                                         {{-- <input class="input-icheck" name="permissions[]" type="checkbox"
                                                             value="category.delete"> Delete category --}}
                                                     </label>
@@ -1242,7 +1246,8 @@
                                                 <div class="checkbox">
                                                     <label>
                                                         <input class="checkreport" name="permissions[]" type="checkbox"
-                                                        value="purchase_n_sell_report.view"> View purchase &amp; sell report
+                                                            value="purchase_n_sell_report.view"> View purchase &amp; sell
+                                                        report
                                                         {{-- <input class="input-icheck" name="permissions[]" type="checkbox"
                                                             value="purchase_n_sell_report.view"> View purchase &amp; sell
                                                         report --}}
@@ -1253,7 +1258,7 @@
                                                 <div class="checkbox">
                                                     <label>
                                                         <input class="checkreport" name="permissions[]" type="checkbox"
-                                                        value="tax_report.view"> View Tax report
+                                                            value="tax_report.view"> View Tax report
                                                         {{-- <input class="input-icheck" name="permissions[]" type="checkbox"
                                                             value="tax_report.view"> View Tax report --}}
                                                     </label>
@@ -1263,7 +1268,8 @@
                                                 <div class="checkbox">
                                                     <label>
                                                         <input class="checkreport" name="permissions[]" type="checkbox"
-                                                        value="contacts_report.view">  View Supplier &amp; Customer report
+                                                            value="contacts_report.view"> View Supplier &amp; Customer
+                                                        report
                                                         {{-- <input class="input-icheck" name="permissions[]" type="checkbox"
                                                             value="contacts_report.view"> View Supplier &amp; Customer
                                                         report --}}
@@ -1274,7 +1280,7 @@
                                                 <div class="checkbox">
                                                     <label>
                                                         <input class="checkreport" name="permissions[]" type="checkbox"
-                                                        value="expense_report.view">   View expense report
+                                                            value="expense_report.view"> View expense report
                                                         {{-- <input class="input-icheck" name="permissions[]" type="checkbox"
                                                             value="expense_report.view"> View expense report --}}
                                                     </label>
@@ -1284,7 +1290,7 @@
                                                 <div class="checkbox">
                                                     <label>
                                                         <input class="checkreport" name="permissions[]" type="checkbox"
-                                                        value="profit_loss_report.view">  View profit/loss report
+                                                            value="profit_loss_report.view"> View profit/loss report
                                                         {{-- <input class="input-icheck" name="permissions[]" type="checkbox"
                                                             value="profit_loss_report.view"> View profit/loss report --}}
                                                     </label>
@@ -1294,7 +1300,8 @@
                                                 <div class="checkbox">
                                                     <label>
                                                         <input class="checkreport" name="permissions[]" type="checkbox"
-                                                        value="stock_report.view">  View stock report, stock adjustment report
+                                                            value="stock_report.view"> View stock report, stock adjustment
+                                                        report
                                                         &amp; stock expiry report
                                                         {{-- <input class="input-icheck" name="permissions[]" type="checkbox"
                                                             value="stock_report.view"> View stock report, stock adjustment
@@ -1307,7 +1314,7 @@
                                                 <div class="checkbox">
                                                     <label>
                                                         <input class="checkreport" name="permissions[]" type="checkbox"
-                                                        value="trending_product_report.view"> View trending product
+                                                            value="trending_product_report.view"> View trending product
                                                         {{-- <input class="input-icheck" name="permissions[]" type="checkbox"
                                                             value="trending_product_report.view"> View trending product
                                                         report --}}
@@ -1318,7 +1325,7 @@
                                                 <div class="checkbox">
                                                     <label>
                                                         <input class="checkreport" name="permissions[]" type="checkbox"
-                                                        value="register_report.view"> View register report
+                                                            value="register_report.view"> View register report
                                                         {{-- <input class="input-icheck" name="permissions[]" type="checkbox"
                                                             value="register_report.view"> View register report --}}
                                                     </label>
@@ -1329,864 +1336,964 @@
                                                 <div class="checkbox">
                                                     <label>
                                                         <input class="checkreport" name="permissions[]" type="checkbox"
-                                                        value="sales_representative.view""> View sales representative
-                                                        {{-- <input class="input-icheck" name="permissions[]" type="checkbox"
+                                                            value="sales_representative.view""> View sales representative
+                                                            {{-- <input class="input-icheck" name="permissions[]" type="checkbox"
                                                             value="sales_representative.view"> View sales representative
                                                         report --}}
-                                                    </label>
+                                                        </label>
+                                                    </div>
                                                 </div>
-                                            </div>
-                                            <div class="col-md-12">
-                                                <div class="checkbox">
-                                                    <label>
-                                                        <input class="checkreport" name="permissions[]" type="checkbox"
-                                                        value="view_product_stock_value"> View product stock value
-                                                        {{-- <input class="input-icheck" name="permissions[]" type="checkbox"
+                                                <div class=" col-md-12">
+                                                        <div class="checkbox">
+                                                            <label>
+                                                                <input class="checkreport" name="permissions[]"
+                                                                    type="checkbox" value="view_product_stock_value"> View
+                                                                product stock value
+                                                                {{-- <input class="input-icheck" name="permissions[]" type="checkbox"
                                                             value="view_product_stock_value"> View product stock value --}}
-                                                    </label>
+                                                            </label>
+                                                        </div>
                                                 </div>
-                                            </div>
 
-                                        </div>
-                                    </div>
-                                    <hr>
-                                    <div class="row check_group">
-                                        <div class="col-md-2">
-                                            <h4>Settings</h4>
-                                        </div>
-                                        <div class="col-md-2">
-                                            <div class="checkbox">
-                                                <label>
-                                                    <input type="checkbox" id="check_Settings"> Select all
-                                                    {{-- <input type="checkbox" class="check_all input-icheck"> Select all --}}
-                                                </label>
                                             </div>
                                         </div>
-                                        <div class="col-md-8">
-                                            <div class="col-md-12">
+                                        <hr>
+                                        <div class="row check_group">
+                                            <div class="col-md-2">
+                                                <h4>Settings</h4>
+                                            </div>
+                                            <div class="col-md-2">
                                                 <div class="checkbox">
                                                     <label>
-                                                        <input class="checkSettings" name="permissions[]" type="checkbox"
-                                                        value="business_settings.access"> Access business settings
-                                                        {{-- <input class="input-icheck" name="permissions[]" type="checkbox"
+                                                        <input type="checkbox" id="check_Settings"> Select all
+                                                        {{-- <input type="checkbox" class="check_all input-icheck"> Select all --}}
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-8">
+                                                <div class="col-md-12">
+                                                    <div class="checkbox">
+                                                        <label>
+                                                            <input class="checkSettings" name="permissions[]"
+                                                                type="checkbox" value="business_settings.access"> Access
+                                                            business settings
+                                                            {{-- <input class="input-icheck" name="permissions[]" type="checkbox"
                                                             value="business_settings.access"> Access business settings --}}
-                                                    </label>
+                                                        </label>
+                                                    </div>
                                                 </div>
-                                            </div>
-                                            <div class="col-md-12">
-                                                <div class="checkbox">
-                                                    <label>
-                                                        <input class="checkSettings" name="permissions[]" type="checkbox"
-                                                        value="barcode_settings.access"> Access barcode settings
-                                                        {{-- <input class="input-icheck" name="permissions[]" type="checkbox"
+                                                <div class="col-md-12">
+                                                    <div class="checkbox">
+                                                        <label>
+                                                            <input class="checkSettings" name="permissions[]"
+                                                                type="checkbox" value="barcode_settings.access"> Access
+                                                            barcode settings
+                                                            {{-- <input class="input-icheck" name="permissions[]" type="checkbox"
                                                             value="barcode_settings.access"> Access barcode settings --}}
-                                                    </label>
+                                                        </label>
+                                                    </div>
                                                 </div>
-                                            </div>
-                                            <div class="col-md-12">
-                                                <div class="checkbox">
-                                                    <label>
-                                                        <input class="checkSettings" name="permissions[]" type="checkbox"
-                                                        value="invoice_settings.access"> Access invoice settings
-                                                        {{-- <input class="input-icheck" name="permissions[]" type="checkbox"
+                                                <div class="col-md-12">
+                                                    <div class="checkbox">
+                                                        <label>
+                                                            <input class="checkSettings" name="permissions[]"
+                                                                type="checkbox" value="invoice_settings.access"> Access
+                                                            invoice settings
+                                                            {{-- <input class="input-icheck" name="permissions[]" type="checkbox"
                                                             value="invoice_settings.access"> Access invoice settings --}}
-                                                    </label>
+                                                        </label>
+                                                    </div>
                                                 </div>
-                                            </div>
-                                            <div class="col-md-12">
-                                                <div class="checkbox">
-                                                    <label>
-                                                        <input class="checkSettings" name="permissions[]" type="checkbox"
-                                                        value="access_printers">  Access printers
-                                                        {{-- <input class="input-icheck" name="permissions[]" type="checkbox"
+                                                <div class="col-md-12">
+                                                    <div class="checkbox">
+                                                        <label>
+                                                            <input class="checkSettings" name="permissions[]"
+                                                                type="checkbox" value="access_printers"> Access printers
+                                                            {{-- <input class="input-icheck" name="permissions[]" type="checkbox"
                                                             value="access_printers">
                                                         Access printers --}}
-                                                    </label>
+                                                        </label>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
-                                    <hr>
-                                    <div class="row check_group">
-                                        <div class="col-md-2">
-                                            <h4>Expense</h4>
+                                        <hr>
+                                        <div class="row check_group">
+                                            <div class="col-md-2">
+                                                <h4>Expense</h4>
+                                            </div>
+                                            <div class="col-md-2">
+                                                <div class="checkbox">
+                                                    <label>
+                                                        <input type="checkbox" class="check_all input-icheck">Select all
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-8">
+                                                <div class="col-md-12">
+                                                    <div class="checkbox">
+                                                        <label>
+                                                            <input class="input-icheck" name="radio_option[expense_view]"
+                                                                type="radio" value="all_expense.access"> Access all expenses
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-12">
+                                                    <div class="checkbox">
+                                                        <label>
+                                                            <input class="input-icheck" name="radio_option[expense_view]"
+                                                                type="radio" value="view_own_expense">
+                                                            View own expense only
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-12">
+                                                    <div class="checkbox">
+                                                        <label>
+                                                            <input class="input-icheck" name="permissions[]"
+                                                                type="checkbox" value="expense.add"> Add Expense
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-12">
+                                                    <div class="checkbox">
+                                                        <label>
+                                                            <input class="input-icheck" name="permissions[]"
+                                                                type="checkbox" value="expense.edit"> Edit Expense
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-12">
+                                                    <div class="checkbox">
+                                                        <label>
+                                                            <input class="input-icheck" name="permissions[]"
+                                                                type="checkbox" value="expense.delete"> Delete Expense
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </div>
-                                        <div class="col-md-2">
-                                            <div class="checkbox">
-                                                <label>
-                                                    <input type="checkbox" class="check_all input-icheck">Select all
-                                                </label>
+                                        <hr>
+                                        {{-- end --}}
+                                        {{-- next --}}
+                                        <div class="row check_group">
+                                            <div class="col-md-4">
+                                                <h4>Home <i class="fa fa-info-circle text-info hover-q no-print "
+                                                        aria-hidden="true" data-container="body" data-toggle="popover"
+                                                        data-placement="auto bottom"
+                                                        data-content="If unchecked only Welcome message will be displayed in Home."
+                                                        data-html="true" data-trigger="hover"></i></h4>
                                             </div>
-                                        </div>
-                                        <div class="col-md-8">
-                                            <div class="col-md-12">
-                                                <div class="checkbox">
-                                                    <label>
-                                                        <input class="input-icheck" name="radio_option[expense_view]"
-                                                            type="radio" value="all_expense.access"> Access all expenses
-                                                    </label>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-12">
-                                                <div class="checkbox">
-                                                    <label>
-                                                        <input class="input-icheck" name="radio_option[expense_view]"
-                                                            type="radio" value="view_own_expense">
-                                                        View own expense only
-                                                    </label>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-12">
-                                                <div class="checkbox">
-                                                    <label>
-                                                        <input class="input-icheck" name="permissions[]" type="checkbox"
-                                                            value="expense.add"> Add Expense
-                                                    </label>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-12">
-                                                <div class="checkbox">
-                                                    <label>
-                                                        <input class="input-icheck" name="permissions[]" type="checkbox"
-                                                            value="expense.edit"> Edit Expense
-                                                    </label>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-12">
-                                                <div class="checkbox">
-                                                    <label>
-                                                        <input class="input-icheck" name="permissions[]" type="checkbox"
-                                                            value="expense.delete"> Delete Expense
-                                                    </label>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <hr>
-                                    {{-- end --}}
-                                    {{-- next --}}
-                                    <div class="row check_group">
-                                        <div class="col-md-4">
-                                            <h4>Home <i class="fa fa-info-circle text-info hover-q no-print "
-                                                    aria-hidden="true" data-container="body" data-toggle="popover"
-                                                    data-placement="auto bottom"
-                                                    data-content="If unchecked only Welcome message will be displayed in Home."
-                                                    data-html="true" data-trigger="hover"></i></h4>
-                                        </div>
-                                        <div class="col-md-8">
-                                            <div class="col-md-12">
-                                                <div class="checkbox">
-                                                    <label>
-                                                        <input class="input-icheck status" name="permissions[]"type="hidden" value="not_view_data">
-                                                        <input class="input-icheck status" name="permissions[]"type="checkbox" value="view_data"> View Home data
-                                                        {{-- <input class="input-icheck" checked="checked"
+                                            <div class="col-md-8">
+                                                <div class="col-md-12">
+                                                    <div class="checkbox">
+                                                        <label>
+                                                            <input class="input-icheck status" name="permissions[]"
+                                                                type="hidden" value="not_view_data">
+                                                            <input class="input-icheck status" name="permissions[]"
+                                                                type="checkbox" value="view_data"> View Home data
+                                                            {{-- <input class="input-icheck" checked="checked"
                                                             name="permissions[]" type="checkbox" value="dashboard.data">
                                                         View Home data --}}
-                                                    </label>
+                                                        </label>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
-                                    <hr>
-                                    {{-- end --}}
-                                    {{-- next --}}
-                                    <div class="row check_group">
-                                        <div class="col-md-4">
-                                            <h4>Account</h4>
-                                        </div>
-                                        <div class="col-md-8">
-                                            <div class="col-md-12">
-                                                <div class="checkbox">
-                                                    <label>
-                                                        <input class="input-icheck status" name="permissions_account.access[]"type="checkbox" value="account.access">  Access Accounts
-                                                        {{-- <input class="input-icheck" name="permissions[]" type="checkbox"
+                                        <hr>
+                                        {{-- end --}}
+                                        {{-- next --}}
+                                        <div class="row check_group">
+                                            <div class="col-md-4">
+                                                <h4>Account</h4>
+                                            </div>
+                                            <div class="col-md-8">
+                                                <div class="col-md-12">
+                                                    <div class="checkbox">
+                                                        <label>
+                                                            <input class="input-icheck status"
+                                                                name="permissions_account.access[]" type="checkbox"
+                                                                value="account.access"> Access Accounts
+                                                            {{-- <input class="input-icheck" name="permissions[]" type="checkbox"
                                                             value="account.access"> Access Accounts --}}
-                                                    </label>
+                                                        </label>
+                                                    </div>
                                                 </div>
-                                            </div>
 
-                                            <div class="col-md-12">
-                                                <div class="checkbox">
-                                                    <label>
-                                                        <input class="input-icheck status" name="permissions_account.access[]"type="checkbox" value="edit_account_transaction">  Edit account transaction
-                                                        {{-- <input class="input-icheck" name="permissions[]" type="checkbox"
+                                                <div class="col-md-12">
+                                                    <div class="checkbox">
+                                                        <label>
+                                                            <input class="input-icheck status"
+                                                                name="permissions_account.access[]" type="checkbox"
+                                                                value="edit_account_transaction"> Edit account transaction
+                                                            {{-- <input class="input-icheck" name="permissions[]" type="checkbox"
                                                             value="edit_account_transaction"> Edit account transaction --}}
-                                                    </label>
+                                                        </label>
+                                                    </div>
                                                 </div>
-                                            </div>
 
-                                            <div class="col-md-12">
-                                                <div class="checkbox">
-                                                    <label>
-                                                        <input class="input-icheck status" name="permissions_account.access[]"type="checkbox" value="delete_account_transaction">  Delete account transaction
-                                                        {{-- <input class="input-icheck" name="permissions[]" type="checkbox"
+                                                <div class="col-md-12">
+                                                    <div class="checkbox">
+                                                        <label>
+                                                            <input class="input-icheck status"
+                                                                name="permissions_account.access[]" type="checkbox"
+                                                                value="delete_account_transaction"> Delete account
+                                                            transaction
+                                                            {{-- <input class="input-icheck" name="permissions[]" type="checkbox"
                                                             value="delete_account_transaction"> Delete account transaction --}}
-                                                    </label>
+                                                        </label>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
-                                    <hr>
-                                    {{-- end --}}
-                                    {{-- next --}}
-                                    <div class="row">
-                                        <div class="col-md-4">
-                                            <h4>Access selling price groups</h4>
-                                        </div>
-                                        <div class="col-md-8">
-                                            <div class="col-md-12">
-                                                <div class="checkbox">
-                                                    <label>
-                                                        <input class="input-icheck status" name="permissionscheck[]"type="hidden" value="not_access_default_selling_price">
-<input class="input-icheck status" name="permissionscheck[]"type="checkbox" value="access_default_selling_price"> Default Selling Price
-                                                        {{-- <input class="input-icheck" checked="checked"
+                                        <hr>
+                                        {{-- end --}}
+                                        {{-- next --}}
+                                        <div class="row">
+                                            <div class="col-md-4">
+                                                <h4>Access selling price groups</h4>
+                                            </div>
+                                            <div class="col-md-8">
+                                                <div class="col-md-12">
+                                                    <div class="checkbox">
+                                                        <label>
+                                                            <input class="input-icheck status" name="permissionscheck[]"
+                                                                type="hidden" value="not_access_default_selling_price">
+                                                            <input class="input-icheck status" name="permissionscheck[]"
+                                                                type="checkbox" value="access_default_selling_price">
+                                                            Default Selling Price
+                                                            {{-- <input class="input-icheck" checked="checked"
                                                             name="permissions[]" type="checkbox"
                                                             value="access_default_selling_price"> Default Selling Price --}}
-                                                    </label>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <hr>
-                                    {{-- end --}}
-                                    {{-- next --}}
-                                    <div class="row check_group">
-                                        <div class="col-md-4">
-                                            <h4>AssetManagement</h4>
-                                        </div>
-                                        <div class="col-md-8">
-                                            <div class="col-md-12">
-                                                <div class="checkbox">
-                                                    <label>
-                                                        {{-- <input class="input-icheck" name="permissions[]" type="checkbox"
-                                                            value="asset.view"> View Asset --}}
- <input class="input-icheck status" name="permissions_Asset[]"type="hidden" value="not_asset.view"">
-<input class="input-icheck status" name="permissions_Asset[]"type="checkbox" value="asset.view""> View Asset
-                                                    </label>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <hr>
-                                    {{-- end --}}
-                                    {{-- next --}}
-                                    <div class="row check_group">
-                                        <div class="col-md-4">
-                                            <h4>Crm</h4>
-                                        </div>
-                                        <div class="col-md-8">
-                                            <div class="col-md-12">
-                                                <div class="checkbox">
-                                                    <label>
-                                                        <input class="input-icheck" name="radio_option[schedule_view]"
-                                                            type="radio" value="crm.access_all_schedule"> Access all follow
-                                                        up
-                                                    </label>
-                                                </div>
-
-                                            </div>
-                                            <div class="col-md-12">
-                                                <div class="checkbox">
-                                                    <label>
-                                                        <input class="input-icheck" name="radio_option[schedule_view]"
-                                                            type="radio" value="crm.access_own_schedule"> Access own follow
-                                                        up
-                                                    </label>
-                                                </div>
-
-                                                <hr>
-                                                {{-- end --}}
-                                                {{-- next --}}
-
-
-                                            </div>
-                                            <div class="col-md-12">
-                                                <div class="checkbox">
-                                                    <label>
-                                                        <input class="input-icheck" name="radio_option[leads_view]"
-                                                            type="radio" value="crm.access_all_leads"> Access all leads
-                                                    </label>
-                                                </div>
-
-                                            </div>
-                                            <div class="col-md-12">
-                                                <div class="checkbox">
-                                                    <label>
-                                                        <input class="input-icheck" name="radio_option[leads_view]"
-                                                            type="radio" value="crm.access_own_leads"> Access own leads
-                                                    </label>
-                                                </div>
-
-                                                <hr>
-                                            </div>
-                                            {{-- end --}}
-                                            {{-- next --}}
-                                            <div class="col-md-12">
-                                                <div class="checkbox">
-                                                    <label>
-                                                        <input class="input-icheck" name="radio_option[campaigns_view]"
-                                                            type="radio" value="crm.access_all_campaigns"> Access all
-                                                        campaigns
-                                                    </label>
-                                                </div>
-
-                                            </div>
-                                            <div class="col-md-12">
-                                                <div class="checkbox">
-                                                    <label>
-                                                        <input class="input-icheck" name="radio_option[campaigns_view]"
-                                                            type="radio" value="crm.access_own_campaigns"> Access own
-                                                        campaigns
-                                                    </label>
-                                                </div>
-
-                                                <hr>
-                                            </div>
-                                            <div class="col-md-12">
-                                                <div class="checkbox">
-                                                    <label>
-                                                        <input class="input-icheck" name="permissions[]" type="checkbox"
-                                                            value="crm.access_contact_login"> Access contact login
-                                                    </label>
-                                                </div>
-
-                                            </div>
-                                            <div class="col-md-12">
-                                                <div class="checkbox">
-                                                    <label>
-                                                        <input class="input-icheck" name="permissions[]" type="checkbox"
-                                                            value="crm.access_sources"> Access sources
-                                                    </label>
-                                                </div>
-
-                                            </div>
-                                            <div class="col-md-12">
-                                                <div class="checkbox">
-                                                    <label>
-                                                        <input class="input-icheck" name="permissions[]" type="checkbox"
-                                                            value="crm.access_life_stage"> Access life stage
-                                                    </label>
-                                                </div>
-
-                                            </div>
-                                            <div class="col-md-12">
-                                                <div class="checkbox">
-                                                    <label>
-                                                        <input class="input-icheck" name="permissions[]" type="checkbox"
-                                                            value="crm.access_proposal"> Access proposal
-                                                    </label>
-                                                </div>
-
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <hr>
-                                    {{-- end --}}
-                                    {{-- next --}}
-                                    <div class="row check_group">
-                                        <div class="col-md-4">
-                                            <h4>Essentials</h4>
-                                        </div>
-                                        <div class="col-md-8">
-                                            <div class="col-md-12">
-                                                <div class="checkbox">
-                                                    <label>
-                                                        <input class="input-icheck" name="permissions[]" type="checkbox"
-                                                            value="essentials.crud_leave_type"> Add/Edit/View/Delete leave
-                                                        type
-                                                    </label>
-                                                </div>
-
-                                            </div>
-                                            <div class="col-md-12">
-                                                <div class="checkbox">
-                                                    <label>
-                                                        <input class="input-icheck" name="radio_option[leave_crud]"
-                                                            type="radio" value="essentials.crud_all_leave">
-                                                        Add/Edit/View/Delete all leave
-                                                    </label>
-                                                </div>
-
-                                            </div>
-                                            <div class="col-md-12">
-                                                <div class="checkbox">
-                                                    <label>
-                                                        <input class="input-icheck" name="radio_option[leave_crud]"
-                                                            type="radio" value="essentials.crud_own_leave"> Add/View own
-                                                        leave
-                                                    </label>
-                                                </div>
-
-                                            </div>
-                                            <div class="col-md-12">
-                                                <div class="checkbox">
-                                                    <label>
-                                                        <input class="input-icheck" name="permissions[]" type="checkbox"
-                                                            value="essentials.approve_leave"> Approve Leave
-                                                    </label>
-                                                </div>
-
-                                            </div>
-                                            <div class="col-md-12">
-                                                <div class="checkbox">
-                                                    <label>
-                                                        <input class="input-icheck" name="radio_option[attendance_crud]"
-                                                            type="radio" value="essentials.crud_all_attendance">
-                                                        Add/Edit/View/Delete all attendance
-                                                    </label>
-                                                </div>
-
-                                            </div>
-                                            <div class="col-md-12">
-                                                <div class="checkbox">
-                                                    <label>
-                                                        <input class="input-icheck" name="radio_option[attendance_crud]"
-                                                            type="radio" value="essentials.view_own_attendance"> View own
-                                                        attendance
-                                                    </label>
-                                                </div>
-
-                                            </div>
-                                            <div class="col-md-12">
-                                                <div class="checkbox">
-                                                    <label>
-                                                        <input class="input-icheck" name="permissions[]" type="checkbox"
-                                                            value="essentials.allow_users_for_attendance_from_web"> Allow
-                                                        users to enter their own attendance from web
-                                                    </label>
-                                                </div>
-
-                                            </div>
-                                            <div class="col-md-12">
-                                                <div class="checkbox">
-                                                    <label>
-                                                        <input class="input-icheck" name="permissions[]" type="checkbox"
-                                                            value="essentials.allow_users_for_attendance_from_api"> Allow
-                                                        users to enter their own attendance from api
-                                                    </label>
-                                                </div>
-
-                                            </div>
-                                            <div class="col-md-12">
-                                                <div class="checkbox">
-                                                    <label>
-                                                        <input class="input-icheck" name="permissions[]" type="checkbox"
-                                                            value="essentials.view_allowance_and_deduction"> View Pay
-                                                        Component
-                                                    </label>
-                                                </div>
-
-                                            </div>
-                                            <div class="col-md-12">
-                                                <div class="checkbox">
-                                                    <label>
-                                                        <input class="input-icheck" name="permissions[]" type="checkbox"
-                                                            value="essentials.add_allowance_and_deduction"> Add Pay
-                                                        Component
-                                                    </label>
-                                                </div>
-
-                                            </div>
-                                            <div class="col-md-12">
-                                                <div class="checkbox">
-                                                    <label>
-                                                        <input class="input-icheck" name="permissions[]" type="checkbox"
-                                                            value="essentials.crud_department"> Add/Edit/View/Delete
-                                                        department
-                                                    </label>
-                                                </div>
-
-                                            </div>
-                                            <div class="col-md-12">
-                                                <div class="checkbox">
-                                                    <label>
-                                                        <input class="input-icheck" name="permissions[]" type="checkbox"
-                                                            value="essentials.crud_designation"> Add/Edit/View/Delete
-                                                        designation
-                                                    </label>
-                                                </div>
-
-                                            </div>
-                                            <div class="col-md-12">
-                                                <div class="checkbox">
-                                                    <label>
-                                                        <input class="input-icheck" name="permissions[]" type="checkbox"
-                                                            value="essentials.view_all_payroll"> View all Payroll
-                                                    </label>
-                                                </div>
-
-                                            </div>
-                                            <div class="col-md-12">
-                                                <div class="checkbox">
-                                                    <label>
-                                                        <input class="input-icheck" name="permissions[]" type="checkbox"
-                                                            value="essentials.create_payroll"> Add Payroll
-                                                    </label>
-                                                </div>
-
-                                            </div>
-                                            <div class="col-md-12">
-                                                <div class="checkbox">
-                                                    <label>
-                                                        <input class="input-icheck" name="permissions[]" type="checkbox"
-                                                            value="essentials.update_payroll"> Edit Payroll
-                                                    </label>
-                                                </div>
-
-                                            </div>
-                                            <div class="col-md-12">
-                                                <div class="checkbox">
-                                                    <label>
-                                                        <input class="input-icheck" name="permissions[]" type="checkbox"
-                                                            value="essentials.delete_payroll"> Delete Payroll
-                                                    </label>
-                                                </div>
-
-                                            </div>
-                                            <div class="col-md-12">
-                                                <div class="checkbox">
-                                                    <label>
-                                                        <input class="input-icheck" name="permissions[]" type="checkbox"
-                                                            value="essentials.assign_todos"> Assign To Do&#039;s to others
-                                                    </label>
-                                                </div>
-
-                                            </div>
-                                            <div class="col-md-12">
-                                                <div class="checkbox">
-                                                    <label>
-                                                        <input class="input-icheck" name="permissions[]" type="checkbox"
-                                                            value="essentials.create_message"> Create Message
-                                                    </label>
-                                                </div>
-
-                                            </div>
-                                            <div class="col-md-12">
-                                                <div class="checkbox">
-                                                    <label>
-                                                        <input class="input-icheck" name="permissions[]" type="checkbox"
-                                                            value="essentials.view_message"> View Message
-                                                    </label>
-                                                </div>
-
-                                            </div>
-                                            <div class="col-md-12">
-                                                <div class="checkbox">
-                                                    <label>
-                                                        <input class="input-icheck" name="permissions[]" type="checkbox"
-                                                            value="essentials.access_sales_target"> Access Sales Targets
-                                                    </label>
-                                                </div>
-
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <hr>
-                                    {{-- end --}}
-                                    {{-- next --}}
-                                    <div class="row check_group">
-                                        <div class="col-md-4">
-                                            <h4>Manufacturing</h4>
-                                        </div>
-                                        <div class="col-md-8">
-                                            <div class="col-md-12">
-                                                <div class="checkbox">
-                                                    <label>
-                                                        <label>
-                                                            <input class="check_Manufacturing" name="permissions[]"
-                                                                type="checkbox" value="">View Recipe
                                                         </label>
-                                                        {{-- <input class="input-icheck" name="permissions[]" type="checkbox" value="manufacturing.access_recipe"> View Recipe --}}
-                                                    </label>
+                                                    </div>
                                                 </div>
-
-                                            </div>
-                                            <div class="col-md-12">
-                                                <div class="checkbox">
-                                                    <label>
-                                                        <input class="check_Manufacturing" name="permissions[]"
-                                                            type="checkbox" value="Add_Recipe"> Add Recipe
-                                                        {{-- <input class="input-icheck" name="permissions[]" type="checkbox" value="manufacturing.add_recipe"> Add Recipe --}}
-                                                    </label>
-                                                </div>
-
-                                            </div>
-                                            <div class="col-md-12">
-                                                <div class="checkbox">
-                                                    <label>
-                                                        <input class="check_Manufacturing" name="permissions[]"
-                                                            type="checkbox" value="edit_Recipe">Edit Recipe
-                                                        {{-- <input class="input-icheck" name="permissions[]" type="checkbox" value="manufacturing.edit_recipe"> Edit Recipe --}}
-                                                    </label>
-                                                </div>
-
-                                            </div>
-                                            <div class="col-md-12">
-                                                <div class="checkbox">
-                                                    <label>
-                                                        <input class="check_Manufacturing" name="permissions[]"
-                                                            type="checkbox" value="Access_Production">Access Production
-                                                        {{-- <input class="input-icheck" name="permissions[]" type="checkbox" value="manufacturing.access_production"> Access Production --}}
-                                                    </label>
-                                                </div>
-
                                             </div>
                                         </div>
-                                    </div>
-                                    <hr>
-                                    {{-- end --}}
-                                    {{-- next --}}
-                                    <div class="row check_group">
-                                        <div class="col-md-4">
-                                            <h4>Project</h4>
-                                        </div>
-                                        <div class="col-md-8">
-                                            <div class="col-md-12">
-                                                <div class="checkbox">
-                                                    <label>
-                                                        <input class="checkitem_project" name="permissions[]"
-                                                            type="checkbox" value="project.create"> Create Project
-                                                        {{-- <input class="input-icheck" name="permissions[]" type="checkbox" value="project.create_project"> Create Project --}}
-                                                    </label>
-                                                </div>
 
+                                        <hr>
+                                        {{-- end --}}
+                                        {{-- next --}}
+                                        <div class="row check_group">
+                                            <div class="col-md-4">
+                                                <h4>AssetManagement</h4>
                                             </div>
-                                            <div class="col-md-12">
-                                                <div class="checkbox">
-                                                    <label>
-                                                        <input class="checkitem_project" name="permissions[]"
-                                                            type="checkbox" value="Edit_Project"> Edit Project
-                                                        {{-- \<input class="input-icheck" name="permissions[]" type="checkbox" value="project.edit_project"> Edit Project --}}
-                                                    </label>
+                                            <div class="col-md-8">
+                                                <div class="col-md-12">
+                                                    <div class="checkbox">
+                                                        <label>
+                                                            {{-- <input class="input-icheck" name="permissions[]" type="checkbox"
+                                                            value="asset.view"> View Asset --}}
+                                                            <input class="input-icheck status" name="permissions_Asset[]"
+                                                                type="hidden" value="not_asset.view"">
+    <input class=" input-icheck status" name="permissions_Asset[]" type="checkbox" value="asset.view""> View Asset
+                                                        </label>
+                                                    </div>
                                                 </div>
-
-                                            </div>
-                                            <div class="col-md-12">
-                                                <div class="checkbox">
-                                                    <label>
-                                                        <input class="checkitem_project" name="permissions[]"
-                                                            type="checkbox" value="delete_Project"> Delete Project
-                                                        {{-- <input class="input-icheck" name="permissions[]" type="checkbox" value="project.delete_project"> Delete Project --}}
-                                                    </label>
-                                                </div>
-
                                             </div>
                                         </div>
-                                    </div>
-                                    <hr>
-                                    {{-- end --}}
-                                    {{-- next --}}
-                                    <div class="row check_group">
-                                        <div class="col-md-4">
-                                            <h4>Repair</h4>
-                                        </div>
-                                        <div class="col-md-8">
-                                            <div class="col-md-12">
-                                                <div class="checkbox">
-                                                    <label>
-                                                        <input class="input-icheck" name="permissions[]" type="checkbox"
-                                                            value="repair.create"> Add Invoice
-                                                    </label>
-                                                </div>
+                                        <hr>
+                                        {{-- end --}}
+                                        {{-- next --}}
+                                        <div class=" row check_group">
+                                                            <div class="col-md-4">
+                                                                <h4>Crm</h4>
+                                                            </div>
+                                                            <div class="col-md-8">
+                                                                <div class="col-md-12">
+                                                                    <div class="checkbox">
+                                                                        <label>
+                                                                            <input class="input-icheck"
+                                                                                name="radio_option[schedule_view]"
+                                                                                type="radio"
+                                                                                value="crm.access_all_schedule"> Access all
+                                                                            follow
+                                                                            up
+                                                                        </label>
+                                                                    </div>
 
-                                            </div>
-                                            <div class="col-md-12">
-                                                <div class="checkbox">
-                                                    <label>
-                                                        <input class="input-icheck" name="permissions[]" type="checkbox"
-                                                            value="repair.update"> Edit Invoice
-                                                    </label>
-                                                </div>
+                                                                </div>
+                                                                <div class="col-md-12">
+                                                                    <div class="checkbox">
+                                                                        <label>
+                                                                            <input class="input-icheck"
+                                                                                name="radio_option[schedule_view]"
+                                                                                type="radio"
+                                                                                value="crm.access_own_schedule"> Access own
+                                                                            follow
+                                                                            up
+                                                                        </label>
+                                                                    </div>
 
-                                            </div>
-                                            <div class="col-md-12">
-                                                <div class="checkbox">
-                                                    <label>
-                                                        <input class="input-icheck"
-                                                            name="radio_option[repair_invoice_view]" type="radio"
-                                                            value="repair.view"> View all invoice
-                                                    </label>
-                                                </div>
+                                                                    <hr>
+                                                                    {{-- end --}}
+                                                                    {{-- next --}}
 
-                                            </div>
-                                            <div class="col-md-12">
-                                                <div class="checkbox">
-                                                    <label>
-                                                        <input class="input-icheck"
-                                                            name="radio_option[repair_invoice_view]" type="radio"
-                                                            value="repair.view_own"> View own invoice
-                                                    </label>
-                                                </div>
 
-                                            </div>
-                                            <div class="col-md-12">
-                                                <div class="checkbox">
-                                                    <label>
-                                                        <input class="input-icheck" name="permissions[]" type="checkbox"
-                                                            value="repair.delete"> Delete Invoice
-                                                    </label>
-                                                </div>
+                                                                </div>
+                                                                <div class="col-md-12">
+                                                                    <div class="checkbox">
+                                                                        <label>
+                                                                            <input class="input-icheck"
+                                                                                name="radio_option[leads_view]" type="radio"
+                                                                                value="crm.access_all_leads"> Access all
+                                                                            leads
+                                                                        </label>
+                                                                    </div>
 
-                                            </div>
-                                            <div class="col-md-12">
-                                                <div class="checkbox">
-                                                    <label>
-                                                        <input class="input-icheck" name="permissions[]" type="checkbox"
-                                                            value="repair_status.update"> Change Invoice Status
-                                                    </label>
-                                                </div>
+                                                                </div>
+                                                                <div class="col-md-12">
+                                                                    <div class="checkbox">
+                                                                        <label>
+                                                                            <input class="input-icheck"
+                                                                                name="radio_option[leads_view]" type="radio"
+                                                                                value="crm.access_own_leads"> Access own
+                                                                            leads
+                                                                        </label>
+                                                                    </div>
 
-                                            </div>
-                                            <div class="col-md-12">
-                                                <div class="checkbox">
-                                                    <label>
-                                                        <input class="input-icheck" name="permissions[]" type="checkbox"
-                                                            value="repair_status.access"> Add/Edit/Delete Job Sheet Status
-                                                    </label>
-                                                </div>
+                                                                    <hr>
+                                                                </div>
+                                                                {{-- end --}}
+                                                                {{-- next --}}
+                                                                <div class="col-md-12">
+                                                                    <div class="checkbox">
+                                                                        <label>
+                                                                            <input class="input-icheck"
+                                                                                name="radio_option[campaigns_view]"
+                                                                                type="radio"
+                                                                                value="crm.access_all_campaigns"> Access all
+                                                                            campaigns
+                                                                        </label>
+                                                                    </div>
 
-                                            </div>
-                                            <div class="col-md-12">
-                                                <div class="checkbox">
-                                                    <label>
-                                                        <input class="input-icheck" name="permissions[]" type="checkbox"
-                                                            value="job_sheet.create"> Add job sheet
-                                                    </label>
-                                                </div>
+                                                                </div>
+                                                                <div class="col-md-12">
+                                                                    <div class="checkbox">
+                                                                        <label>
+                                                                            <input class="input-icheck"
+                                                                                name="radio_option[campaigns_view]"
+                                                                                type="radio"
+                                                                                value="crm.access_own_campaigns"> Access own
+                                                                            campaigns
+                                                                        </label>
+                                                                    </div>
 
-                                            </div>
-                                            <div class="col-md-12">
-                                                <div class="checkbox">
-                                                    <label>
-                                                        <input class="input-icheck" name="permissions[]" type="checkbox"
-                                                            value="job_sheet.edit"> Edit Job Sheet
-                                                    </label>
-                                                </div>
+                                                                    <hr>
+                                                                </div>
+                                                                <div class="col-md-12">
+                                                                    <div class="checkbox">
+                                                                        <label>
+                                                                            <input class="input-icheck"
+                                                                                name="permissions[]" type="checkbox"
+                                                                                value="crm.access_contact_login"> Access
+                                                                            contact login
+                                                                        </label>
+                                                                    </div>
 
-                                            </div>
-                                            <div class="col-md-12">
-                                                <div class="checkbox">
-                                                    <label>
-                                                        <input class="input-icheck" name="permissions[]" type="checkbox"
-                                                            value="job_sheet.delete"> Delete Job Sheet
-                                                    </label>
-                                                </div>
+                                                                </div>
+                                                                <div class="col-md-12">
+                                                                    <div class="checkbox">
+                                                                        <label>
+                                                                            <input class="input-icheck"
+                                                                                name="permissions[]" type="checkbox"
+                                                                                value="crm.access_sources"> Access sources
+                                                                        </label>
+                                                                    </div>
 
-                                            </div>
-                                            <div class="col-md-12">
-                                                <div class="checkbox">
-                                                    <label>
-                                                        <input class="input-icheck" name="radio_option[job_sheet_view]"
-                                                            type="radio" value="job_sheet.view_assigned"> View Only Assigned
-                                                        Job Sheet
-                                                    </label>
-                                                </div>
+                                                                </div>
+                                                                <div class="col-md-12">
+                                                                    <div class="checkbox">
+                                                                        <label>
+                                                                            <input class="input-icheck"
+                                                                                name="permissions[]" type="checkbox"
+                                                                                value="crm.access_life_stage"> Access life
+                                                                            stage
+                                                                        </label>
+                                                                    </div>
 
-                                            </div>
-                                            <div class="col-md-12">
-                                                <div class="checkbox">
-                                                    <label>
-                                                        <input class="input-icheck" name="radio_option[job_sheet_view]"
-                                                            type="radio" value="job_sheet.view_all"> View All Job Sheets
-                                                    </label>
-                                                </div>
+                                                                </div>
+                                                                <div class="col-md-12">
+                                                                    <div class="checkbox">
+                                                                        <label>
+                                                                            <input class="input-icheck"
+                                                                                name="permissions[]" type="checkbox"
+                                                                                value="crm.access_proposal"> Access proposal
+                                                                        </label>
+                                                                    </div>
 
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <hr>
-                                    {{-- end --}}
-                                    {{-- next --}}
-                                    <div class="row check_group">
-                                        <div class="col-md-4">
-                                            <h4>Superadmin</h4>
-                                        </div>
-                                        <div class="col-md-8">
-                                            <div class="col-md-12">
-                                                <div class="checkbox">
-                                                    <label>
-                                                        <input class="input-icheck" name="permissions[]" type="checkbox"
-                                                            value="superadmin.access_package_subscriptions"> Access package
-                                                        subscriptions
-                                                    </label>
-                                                </div>
+                                                                </div>
+                                                            </div>
+                                                    </div>
+                                                    <hr>
+                                                    {{-- end --}}
+                                                    {{-- next --}}
+                                                    <div class="row check_group">
+                                                        <div class="col-md-4">
+                                                            <h4>Essentials</h4>
+                                                        </div>
+                                                        <div class="col-md-8">
+                                                            <div class="col-md-12">
+                                                                <div class="checkbox">
+                                                                    <label>
+                                                                        <input class="input-icheck" name="permissions[]"
+                                                                            type="checkbox"
+                                                                            value="essentials.crud_leave_type">
+                                                                        Add/Edit/View/Delete leave
+                                                                        type
+                                                                    </label>
+                                                                </div>
 
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <hr>
-                                    <div class="row check_group">
-                                        <div class="col-md-4">
-                                            <h4>Woocommerce</h4>
-                                        </div>
-                                        <div class="col-md-8">
-                                            <div class="col-md-12">
-                                                <div class="checkbox">
-                                                    <label>
-                                                        <input class="checkitem_woocommerce" name="permissions[]" type="checkbox"
-                                                        value="woocommerce.syc_categories"> Sync Product Categories
-                                                        {{-- <input class="input-icheck" name="permissions[]" type="checkbox"
+                                                            </div>
+                                                            <div class="col-md-12">
+                                                                <div class="checkbox">
+                                                                    <label>
+                                                                        <input class="input-icheck"
+                                                                            name="radio_option[leave_crud]" type="radio"
+                                                                            value="essentials.crud_all_leave">
+                                                                        Add/Edit/View/Delete all leave
+                                                                    </label>
+                                                                </div>
+
+                                                            </div>
+                                                            <div class="col-md-12">
+                                                                <div class="checkbox">
+                                                                    <label>
+                                                                        <input class="input-icheck"
+                                                                            name="radio_option[leave_crud]" type="radio"
+                                                                            value="essentials.crud_own_leave"> Add/View own
+                                                                        leave
+                                                                    </label>
+                                                                </div>
+
+                                                            </div>
+                                                            <div class="col-md-12">
+                                                                <div class="checkbox">
+                                                                    <label>
+                                                                        <input class="input-icheck" name="permissions[]"
+                                                                            type="checkbox"
+                                                                            value="essentials.approve_leave"> Approve Leave
+                                                                    </label>
+                                                                </div>
+
+                                                            </div>
+                                                            <div class="col-md-12">
+                                                                <div class="checkbox">
+                                                                    <label>
+                                                                        <input class="input-icheck"
+                                                                            name="radio_option[attendance_crud]"
+                                                                            type="radio"
+                                                                            value="essentials.crud_all_attendance">
+                                                                        Add/Edit/View/Delete all attendance
+                                                                    </label>
+                                                                </div>
+
+                                                            </div>
+                                                            <div class="col-md-12">
+                                                                <div class="checkbox">
+                                                                    <label>
+                                                                        <input class="input-icheck"
+                                                                            name="radio_option[attendance_crud]"
+                                                                            type="radio"
+                                                                            value="essentials.view_own_attendance"> View own
+                                                                        attendance
+                                                                    </label>
+                                                                </div>
+
+                                                            </div>
+                                                            <div class="col-md-12">
+                                                                <div class="checkbox">
+                                                                    <label>
+                                                                        <input class="input-icheck" name="permissions[]"
+                                                                            type="checkbox"
+                                                                            value="essentials.allow_users_for_attendance_from_web">
+                                                                        Allow
+                                                                        users to enter their own attendance from web
+                                                                    </label>
+                                                                </div>
+
+                                                            </div>
+                                                            <div class="col-md-12">
+                                                                <div class="checkbox">
+                                                                    <label>
+                                                                        <input class="input-icheck" name="permissions[]"
+                                                                            type="checkbox"
+                                                                            value="essentials.allow_users_for_attendance_from_api">
+                                                                        Allow
+                                                                        users to enter their own attendance from api
+                                                                    </label>
+                                                                </div>
+
+                                                            </div>
+                                                            <div class="col-md-12">
+                                                                <div class="checkbox">
+                                                                    <label>
+                                                                        <input class="input-icheck" name="permissions[]"
+                                                                            type="checkbox"
+                                                                            value="essentials.view_allowance_and_deduction">
+                                                                        View Pay
+                                                                        Component
+                                                                    </label>
+                                                                </div>
+
+                                                            </div>
+                                                            <div class="col-md-12">
+                                                                <div class="checkbox">
+                                                                    <label>
+                                                                        <input class="input-icheck" name="permissions[]"
+                                                                            type="checkbox"
+                                                                            value="essentials.add_allowance_and_deduction">
+                                                                        Add Pay
+                                                                        Component
+                                                                    </label>
+                                                                </div>
+
+                                                            </div>
+                                                            <div class="col-md-12">
+                                                                <div class="checkbox">
+                                                                    <label>
+                                                                        <input class="input-icheck" name="permissions[]"
+                                                                            type="checkbox"
+                                                                            value="essentials.crud_department">
+                                                                        Add/Edit/View/Delete
+                                                                        department
+                                                                    </label>
+                                                                </div>
+
+                                                            </div>
+                                                            <div class="col-md-12">
+                                                                <div class="checkbox">
+                                                                    <label>
+                                                                        <input class="input-icheck" name="permissions[]"
+                                                                            type="checkbox"
+                                                                            value="essentials.crud_designation">
+                                                                        Add/Edit/View/Delete
+                                                                        designation
+                                                                    </label>
+                                                                </div>
+
+                                                            </div>
+                                                            <div class="col-md-12">
+                                                                <div class="checkbox">
+                                                                    <label>
+                                                                        <input class="input-icheck" name="permissions[]"
+                                                                            type="checkbox"
+                                                                            value="essentials.view_all_payroll"> View all
+                                                                        Payroll
+                                                                    </label>
+                                                                </div>
+
+                                                            </div>
+                                                            <div class="col-md-12">
+                                                                <div class="checkbox">
+                                                                    <label>
+                                                                        <input class="input-icheck" name="permissions[]"
+                                                                            type="checkbox"
+                                                                            value="essentials.create_payroll"> Add Payroll
+                                                                    </label>
+                                                                </div>
+
+                                                            </div>
+                                                            <div class="col-md-12">
+                                                                <div class="checkbox">
+                                                                    <label>
+                                                                        <input class="input-icheck" name="permissions[]"
+                                                                            type="checkbox"
+                                                                            value="essentials.update_payroll"> Edit Payroll
+                                                                    </label>
+                                                                </div>
+
+                                                            </div>
+                                                            <div class="col-md-12">
+                                                                <div class="checkbox">
+                                                                    <label>
+                                                                        <input class="input-icheck" name="permissions[]"
+                                                                            type="checkbox"
+                                                                            value="essentials.delete_payroll"> Delete
+                                                                        Payroll
+                                                                    </label>
+                                                                </div>
+
+                                                            </div>
+                                                            <div class="col-md-12">
+                                                                <div class="checkbox">
+                                                                    <label>
+                                                                        <input class="input-icheck" name="permissions[]"
+                                                                            type="checkbox" value="essentials.assign_todos">
+                                                                        Assign To Do&#039;s to others
+                                                                    </label>
+                                                                </div>
+
+                                                            </div>
+                                                            <div class="col-md-12">
+                                                                <div class="checkbox">
+                                                                    <label>
+                                                                        <input class="input-icheck" name="permissions[]"
+                                                                            type="checkbox"
+                                                                            value="essentials.create_message"> Create
+                                                                        Message
+                                                                    </label>
+                                                                </div>
+
+                                                            </div>
+                                                            <div class="col-md-12">
+                                                                <div class="checkbox">
+                                                                    <label>
+                                                                        <input class="input-icheck" name="permissions[]"
+                                                                            type="checkbox" value="essentials.view_message">
+                                                                        View Message
+                                                                    </label>
+                                                                </div>
+
+                                                            </div>
+                                                            <div class="col-md-12">
+                                                                <div class="checkbox">
+                                                                    <label>
+                                                                        <input class="input-icheck" name="permissions[]"
+                                                                            type="checkbox"
+                                                                            value="essentials.access_sales_target"> Access
+                                                                        Sales Targets
+                                                                    </label>
+                                                                </div>
+
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <hr>
+                                                    {{-- end --}}
+                                                    {{-- next --}}
+                                                    <div class="row check_group">
+                                                        <div class="col-md-4">
+                                                            <h4>Manufacturing</h4>
+                                                        </div>
+                                                        <div class="col-md-8">
+                                                            <div class="col-md-12">
+                                                                <div class="checkbox">
+                                                                    <label>
+                                                                        <label>
+                                                                            <input class="check_Manufacturing"
+                                                                                name="permissions[]" type="checkbox"
+                                                                                value="">View Recipe
+                                                                        </label>
+                                                                        {{-- <input class="input-icheck" name="permissions[]" type="checkbox" value="manufacturing.access_recipe"> View Recipe --}}
+                                                                    </label>
+                                                                </div>
+
+                                                            </div>
+                                                            <div class="col-md-12">
+                                                                <div class="checkbox">
+                                                                    <label>
+                                                                        <input class="check_Manufacturing"
+                                                                            name="permissions[]" type="checkbox"
+                                                                            value="Add_Recipe"> Add Recipe
+                                                                        {{-- <input class="input-icheck" name="permissions[]" type="checkbox" value="manufacturing.add_recipe"> Add Recipe --}}
+                                                                    </label>
+                                                                </div>
+
+                                                            </div>
+                                                            <div class="col-md-12">
+                                                                <div class="checkbox">
+                                                                    <label>
+                                                                        <input class="check_Manufacturing"
+                                                                            name="permissions[]" type="checkbox"
+                                                                            value="edit_Recipe">Edit Recipe
+                                                                        {{-- <input class="input-icheck" name="permissions[]" type="checkbox" value="manufacturing.edit_recipe"> Edit Recipe --}}
+                                                                    </label>
+                                                                </div>
+
+                                                            </div>
+                                                            <div class="col-md-12">
+                                                                <div class="checkbox">
+                                                                    <label>
+                                                                        <input class="check_Manufacturing"
+                                                                            name="permissions[]" type="checkbox"
+                                                                            value="Access_Production">Access Production
+                                                                        {{-- <input class="input-icheck" name="permissions[]" type="checkbox" value="manufacturing.access_production"> Access Production --}}
+                                                                    </label>
+                                                                </div>
+
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <hr>
+                                                    {{-- end --}}
+                                                    {{-- next --}}
+                                                    <div class="row check_group">
+                                                        <div class="col-md-4">
+                                                            <h4>Project</h4>
+                                                        </div>
+                                                        <div class="col-md-8">
+                                                            <div class="col-md-12">
+                                                                <div class="checkbox">
+                                                                    <label>
+                                                                        <input class="checkitem_project"
+                                                                            name="permissions[]" type="checkbox"
+                                                                            value="project.create"> Create Project
+                                                                        {{-- <input class="input-icheck" name="permissions[]" type="checkbox" value="project.create_project"> Create Project --}}
+                                                                    </label>
+                                                                </div>
+
+                                                            </div>
+                                                            <div class="col-md-12">
+                                                                <div class="checkbox">
+                                                                    <label>
+                                                                        <input class="checkitem_project"
+                                                                            name="permissions[]" type="checkbox"
+                                                                            value="Edit_Project"> Edit Project
+                                                                        {{-- \<input class="input-icheck" name="permissions[]" type="checkbox" value="project.edit_project"> Edit Project --}}
+                                                                    </label>
+                                                                </div>
+
+                                                            </div>
+                                                            <div class="col-md-12">
+                                                                <div class="checkbox">
+                                                                    <label>
+                                                                        <input class="checkitem_project"
+                                                                            name="permissions[]" type="checkbox"
+                                                                            value="delete_Project"> Delete Project
+                                                                        {{-- <input class="input-icheck" name="permissions[]" type="checkbox" value="project.delete_project"> Delete Project --}}
+                                                                    </label>
+                                                                </div>
+
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <hr>
+                                                    {{-- end --}}
+                                                    {{-- next --}}
+                                                    <div class="row check_group">
+                                                        <div class="col-md-4">
+                                                            <h4>Repair</h4>
+                                                        </div>
+                                                        <div class="col-md-8">
+                                                            <div class="col-md-12">
+                                                                <div class="checkbox">
+                                                                    <label>
+                                                                        <input class="input-icheck" name="permissions[]"
+                                                                            type="checkbox" value="repair.create"> Add
+                                                                        Invoice
+                                                                    </label>
+                                                                </div>
+
+                                                            </div>
+                                                            <div class="col-md-12">
+                                                                <div class="checkbox">
+                                                                    <label>
+                                                                        <input class="input-icheck" name="permissions[]"
+                                                                            type="checkbox" value="repair.update"> Edit
+                                                                        Invoice
+                                                                    </label>
+                                                                </div>
+
+                                                            </div>
+                                                            <div class="col-md-12">
+                                                                <div class="checkbox">
+                                                                    <label>
+                                                                        <input class="input-icheck"
+                                                                            name="radio_option[repair_invoice_view]"
+                                                                            type="radio" value="repair.view"> View all
+                                                                        invoice
+                                                                    </label>
+                                                                </div>
+
+                                                            </div>
+                                                            <div class="col-md-12">
+                                                                <div class="checkbox">
+                                                                    <label>
+                                                                        <input class="input-icheck"
+                                                                            name="radio_option[repair_invoice_view]"
+                                                                            type="radio" value="repair.view_own"> View own
+                                                                        invoice
+                                                                    </label>
+                                                                </div>
+
+                                                            </div>
+                                                            <div class="col-md-12">
+                                                                <div class="checkbox">
+                                                                    <label>
+                                                                        <input class="input-icheck" name="permissions[]"
+                                                                            type="checkbox" value="repair.delete"> Delete
+                                                                        Invoice
+                                                                    </label>
+                                                                </div>
+
+                                                            </div>
+                                                            <div class="col-md-12">
+                                                                <div class="checkbox">
+                                                                    <label>
+                                                                        <input class="input-icheck" name="permissions[]"
+                                                                            type="checkbox" value="repair_status.update">
+                                                                        Change Invoice Status
+                                                                    </label>
+                                                                </div>
+
+                                                            </div>
+                                                            <div class="col-md-12">
+                                                                <div class="checkbox">
+                                                                    <label>
+                                                                        <input class="input-icheck" name="permissions[]"
+                                                                            type="checkbox" value="repair_status.access">
+                                                                        Add/Edit/Delete Job Sheet Status
+                                                                    </label>
+                                                                </div>
+
+                                                            </div>
+                                                            <div class="col-md-12">
+                                                                <div class="checkbox">
+                                                                    <label>
+                                                                        <input class="input-icheck" name="permissions[]"
+                                                                            type="checkbox" value="job_sheet.create"> Add
+                                                                        job sheet
+                                                                    </label>
+                                                                </div>
+
+                                                            </div>
+                                                            <div class="col-md-12">
+                                                                <div class="checkbox">
+                                                                    <label>
+                                                                        <input class="input-icheck" name="permissions[]"
+                                                                            type="checkbox" value="job_sheet.edit"> Edit Job
+                                                                        Sheet
+                                                                    </label>
+                                                                </div>
+
+                                                            </div>
+                                                            <div class="col-md-12">
+                                                                <div class="checkbox">
+                                                                    <label>
+                                                                        <input class="input-icheck" name="permissions[]"
+                                                                            type="checkbox" value="job_sheet.delete"> Delete
+                                                                        Job Sheet
+                                                                    </label>
+                                                                </div>
+
+                                                            </div>
+                                                            <div class="col-md-12">
+                                                                <div class="checkbox">
+                                                                    <label>
+                                                                        <input class="input-icheck"
+                                                                            name="radio_option[job_sheet_view]" type="radio"
+                                                                            value="job_sheet.view_assigned"> View Only
+                                                                        Assigned
+                                                                        Job Sheet
+                                                                    </label>
+                                                                </div>
+
+                                                            </div>
+                                                            <div class="col-md-12">
+                                                                <div class="checkbox">
+                                                                    <label>
+                                                                        <input class="input-icheck"
+                                                                            name="radio_option[job_sheet_view]" type="radio"
+                                                                            value="job_sheet.view_all"> View All Job Sheets
+                                                                    </label>
+                                                                </div>
+
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <hr>
+                                                    {{-- end --}}
+                                                    {{-- next --}}
+                                                    <div class="row check_group">
+                                                        <div class="col-md-4">
+                                                            <h4>Superadmin</h4>
+                                                        </div>
+                                                        <div class="col-md-8">
+                                                            <div class="col-md-12">
+                                                                <div class="checkbox">
+                                                                    <label>
+                                                                        <input class="input-icheck" name="permissions[]"
+                                                                            type="checkbox"
+                                                                            value="superadmin.access_package_subscriptions">
+                                                                        Access package
+                                                                        subscriptions
+                                                                    </label>
+                                                                </div>
+
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <hr>
+                                                    <div class="row check_group">
+                                                        <div class="col-md-4">
+                                                            <h4>Woocommerce</h4>
+                                                        </div>
+                                                        <div class="col-md-8">
+                                                            <div class="col-md-12">
+                                                                <div class="checkbox">
+                                                                    <label>
+                                                                        <input class="checkitem_woocommerce"
+                                                                            name="permissions[]" type="checkbox"
+                                                                            value="woocommerce.syc_categories"> Sync Product
+                                                                        Categories
+                                                                        {{-- <input class="input-icheck" name="permissions[]" type="checkbox"
                                                             value="woocommerce.syc_categories"> Sync Product Categories --}}
-                                                    </label>
-                                                </div>
+                                                                    </label>
+                                                                </div>
 
-                                            </div>
-                                            <div class="col-md-12">
-                                                <div class="checkbox">
-                                                    <label>
-                                                        <input class="checkitem_woocommerce" name="permissions[]" type="checkbox"
-                                                        value="woocommerce.sync_products"> Sync Products
-                                                        {{-- <input class="input-icheck" name="permissions[]" type="checkbox"
+                                                            </div>
+                                                            <div class="col-md-12">
+                                                                <div class="checkbox">
+                                                                    <label>
+                                                                        <input class="checkitem_woocommerce"
+                                                                            name="permissions[]" type="checkbox"
+                                                                            value="woocommerce.sync_products"> Sync Products
+                                                                        {{-- <input class="input-icheck" name="permissions[]" type="checkbox"
                                                             value="woocommerce.sync_products"> Sync Products --}}
-                                                    </label>
-                                                </div>
+                                                                    </label>
+                                                                </div>
 
-                                            </div>
-                                            <div class="col-md-12">
-                                                <div class="checkbox">
-                                                    <label>
-                                                        <input class="checkitem_woocommerce" name="permissions[]" type="checkbox"
-                                                        value="woocommerce.sync_orders">  Sync Orders
-                                                        {{-- <input class="input-icheck" name="permissions[]" type="checkbox"
+                                                            </div>
+                                                            <div class="col-md-12">
+                                                                <div class="checkbox">
+                                                                    <label>
+                                                                        <input class="checkitem_woocommerce"
+                                                                            name="permissions[]" type="checkbox"
+                                                                            value="woocommerce.sync_orders"> Sync Orders
+                                                                        {{-- <input class="input-icheck" name="permissions[]" type="checkbox"
                                                             value="woocommerce.sync_orders"> Sync Orders --}}
-                                                    </label>
-                                                </div>
+                                                                    </label>
+                                                                </div>
 
-                                            </div>
-                                            <div class="col-md-12">
-                                                <div class="checkbox">
-                                                    <label>
-                                                        <input class="checkitem_woocommerce" name="permissions[]" type="checkbox"
-                                                        value="woocommerce.map_tax_rates">  Map Tax Rates
-                                                        {{-- <input class="input-icheck" name="permissions[]" type="checkbox"
+                                                            </div>
+                                                            <div class="col-md-12">
+                                                                <div class="checkbox">
+                                                                    <label>
+                                                                        <input class="checkitem_woocommerce"
+                                                                            name="permissions[]" type="checkbox"
+                                                                            value="woocommerce.map_tax_rates"> Map Tax Rates
+                                                                        {{-- <input class="input-icheck" name="permissions[]" type="checkbox"
                                                             value="woocommerce.map_tax_rates"> Map Tax Rates --}}
-                                                    </label>
-                                                </div>
+                                                                    </label>
+                                                                </div>
 
-                                            </div>
-                                            <div class="col-md-12">
-                                                <div class="checkbox">
-                                                    <label>
-                                                        <input class="checkitem_woocommerce" name="permissions[]" type="checkbox"
-                                                        value="woocommerce.access_woocommerce_api_settings">  Access  Woocommerce API settings
-                                                        {{-- <input class="input-icheck" name="permissions[]" type="checkbox"
+                                                            </div>
+                                                            <div class="col-md-12">
+                                                                <div class="checkbox">
+                                                                    <label>
+                                                                        <input class="checkitem_woocommerce"
+                                                                            name="permissions[]" type="checkbox"
+                                                                            value="woocommerce.access_woocommerce_api_settings">
+                                                                        Access Woocommerce API settings
+                                                                        {{-- <input class="input-icheck" name="permissions[]" type="checkbox"
                                                             value="woocommerce.access_woocommerce_api_settings"> Access
                                                         Woocommerce API settings --}}
-                                                    </label>
-                                                </div>
+                                                                    </label>
+                                                                </div>
 
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-md-12">
-                                            <button type="submit" class="btn btn-primary pull-left">Save</button>
-                                        </div>
-                                    </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-md-12">
+                                                            <button type="submit"
+                                                                class="btn btn-primary pull-left">Save</button>
+                                                        </div>
+                                                    </div>
 
-                                    {{-- end --}}
-                                    {{-- lets try  zoi --}}
+                                                    {{-- end --}}
+                                                    {{-- lets try  zoi --}}
                 </form>
             </div>
             <!-- /.box-body -->

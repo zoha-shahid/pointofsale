@@ -1,7 +1,8 @@
 <?php
 
 use App\Http\Controllers\Admin\UserController;
-use App\Models\adduser;
+use App\Http\Controllers\Admin\RoleController;
+use App\Models\User;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\DashboardController;
 
@@ -21,7 +22,6 @@ Route::get('/', function () {
 });
 Route::group(array('prefix' => 'dashboard'), function () {
     Route::get('/',[DashboardController::class, 'index']);
-
     Route::group(array('prefix' => 'user'), function () {
         Route::get('list',[UserController::class, 'index']);
         Route::get('add',[UserController::class, 'addForm']);
@@ -30,26 +30,26 @@ Route::group(array('prefix' => 'dashboard'), function () {
         Route::get('excel', [UserController::class, 'ExportExcel']);
         Route::get('csv', [UserController::class, 'ExportCSV']);
         Route::get('col', [UserController::class, 'col']);
-
-
     });
 });
-
-
-/*Route::get('/dashboard', function () {
-    return view('Admin.dashboard');
-});*/
-/*Route::get('/adduser', function () {
-    return view('Admin.UserManagement.add_user');
-});*/
-
-//Route::get('/viewUser', [UserController::class, 'viewUser']);
-//Route::POST('/adduser', [UserController::class, 'adduser']);
-
-Route::get('/addroles', function () {
-    return view('Admin.UserManagement.add_Roles');
+Route::group(['prefix' =>'Role'], function(){
+    Route::get('add',[RoleController::class, 'index']);
+    Route::post('add',[RoleController::class, 'addForm']);
 });
+
+
+
+
+
+
+
+
+
+
+
 Route::get('/addpermission', function () {
    return view('Admin.UserManagement.Addsalescommission');
 });
+
+
 

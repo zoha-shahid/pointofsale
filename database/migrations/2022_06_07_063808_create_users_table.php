@@ -3,7 +3,6 @@
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
-use phpDocumentor\Reflection\Types\Null_;
 
 return new class extends Migration
 {
@@ -14,7 +13,7 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('addusers', function (Blueprint $table) {
+        Schema::create('users', function (Blueprint $table) {
             $table->id();
             $table->string('Prefix');
             $table->string('First_name');
@@ -48,12 +47,6 @@ return new class extends Migration
             $table->string('Permanent_Address');
             $table->string('Current_Address');
             $table->timestamps();
-            // $table->integer('catgry_id')->nullable();
-            // $table->unsignedBigInteger('store_id')->nullable();
-
-            // $table->foreign('store_id')->references('id')->on('stores')->onDelete('cascade');
-            // rff end
-
         });
     }
 
@@ -64,6 +57,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('addusers');
+        Schema::dropIfExists('users');
     }
 };
