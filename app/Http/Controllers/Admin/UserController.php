@@ -34,24 +34,28 @@ class UserController extends Controller
         $adduser->Last_name = $data['Last_name'];
         $adduser->Email = $data['Email'];
         $adduser->Isactive = $data['Isactive'];
+        //
          $adduser->Allowlogin= $data['Allowlogin'];
         $adduser->Username = $data['Username'];
         $adduser->Password= $data['Password'];
         $adduser->Confirm_Password= $data['Confirm_Password'];
         $adduser->Role = $data['Role'];
         $adduser->Access_location= $data['Access_location'];
+        //
         $adduser->Dateof_birth = $data['Dateof_birth'];
         $adduser->Gender = $data['Gender'];
         $adduser->Marital_status = $data['Marital_status'];
         $adduser->Blood_group = $data['Blood_group'];
         $adduser->Mobile_num = $data['Mobile_num'];
         $adduser->Alternate_num= $data['Alternate_num'];
+        //
         $adduser->Familycontact_num = $data['Familycontact_num'];
         $adduser->Facebook_link= $data['Facebook_link'];
         $adduser->Twitter_link = $data['Twitter_link'];
         $adduser->Social_media1 = $data['Social_media1'];
         $adduser->Social_media2 = $data['Social_media2'];
         $adduser->Custom_field1 = $data['Custom_field1'];
+
         $adduser->Custom_field2 = $data['Custom_field2'];
         $adduser->Custom_field3= $data['Custom_field3'];
         $adduser->Custom_field4 = $data['Custom_field4'];
@@ -63,7 +67,6 @@ class UserController extends Controller
         $adduser->save();
         return redirect('/dashboard/user/list')->with('flash_message_success', 'product Added Successfully!!');
     }
-
 
     public function ExportPDF()
     {
@@ -79,6 +82,58 @@ class UserController extends Controller
     public  function ExportCSV(){
         return Excel::download(new UsersExport, 'users.csv');
     }
+<<<<<<< Updated upstream
 
 
+=======
+    public function editdata($id){
+        $shows= adduser::find($id);
+        // dd($shows);
+        return view('admin.UserManagement.Users.edit_user')->with(compact('shows'));
+    }
+
+        public function usereditdata(Request $request, $id = null){
+            $data = $request->all();
+            $da = array(
+                'Prefix' => $data['Prefix'],
+                'First_name' => $data['First_name'],
+                'Last_name' => $data['Last_name'],
+                'Email' => $data['Email'],
+                'Isactive' => $data['Isactive'],
+                //
+                'Allowlogin' => $data['Allowlogin'],
+                'Username' => $data['Username'],
+                'Password' => $data['Password'],
+                'Confirm_Password' => $data['Confirm_Password'],
+                'Role' => $data['Role'],
+                // 'Access_location' => $data['Access_location'],
+                //
+                'Dateof_birth' => $data['Dateof_birth'],
+                'Gender' => $data['Gender'],
+                'Marital_status' => $data['Marital_status'],
+                'Blood_group' => $data['Blood_group'],
+                'Mobile_num' => $data['Mobile_num'],
+                'Alternate_num' => $data['Alternate_num'],
+
+                'Familycontact_num' => $data['Familycontact_num'],
+                'Facebook_link' => $data['Facebook_link'],
+                'Twitter_link' => $data['Twitter_link'],
+                'Social_media1' => $data['Social_media1'],
+                'Social_media2' => $data['Social_media2'],
+                'Custom_field1' => $data['Custom_field1'],
+
+                'Custom_field2' => $data['Custom_field2'],
+                'Custom_field3' => $data['Custom_field3'],
+                'Custom_field4' => $data['Custom_field4'],
+                'Guardian_name' => $data['Guardian_name'],
+                'Id_name' => $data['Id_name'],
+                'ID_proof_number' => $data['ID_proof_number'],
+                'Permanent_Address' => $data['Permanent_Address'],
+                'Current_Address' => $data['Current_Address']
+            );
+            DB::table('addusers')->where('id', $data['id'])->update($da);
+
+            return redirect('/list');
+    }
+>>>>>>> Stashed changes
 }
