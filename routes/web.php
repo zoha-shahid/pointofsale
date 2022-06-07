@@ -31,11 +31,12 @@ Route::group(array('prefix' => 'dashboard'), function () {
         Route::get('csv', [UserController::class, 'ExportCSV']);
         Route::get('col', [UserController::class, 'col']);
     });
+    Route::group(['prefix' =>'Role'], function(){
+        Route::get('add',[RoleController::class, 'index']);
+        Route::post('add',[RoleController::class, 'addForm']);
+    });
 });
-Route::group(['prefix' =>'Role'], function(){
-    Route::get('add',[RoleController::class, 'index']);
-    Route::post('add',[RoleController::class, 'addForm']);
-});
+
 
 
 
