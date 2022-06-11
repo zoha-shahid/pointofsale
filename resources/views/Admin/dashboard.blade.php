@@ -128,9 +128,9 @@
                       <p class="text-muted">It was an awesome work!</p>
                       <div class="image-layers">
                         <div class="img-sm profile-image-text bg-warning rounded-circle image-layer-item">M</div>
-                        <img class="img-sm rounded-circle image-layer-item" src="images/faces/face3.jpg" alt="profile"/>
-                        <img class="img-sm rounded-circle image-layer-item" src="images/faces/face5.jpg" alt="profile"/>
-                        <img class="img-sm rounded-circle image-layer-item" src="images/faces/face8.jpg" alt="profile"/>
+                        <img class="img-sm rounded-circle image-layer-item" src="{{asset('images/faces/face3.jpg')}}" alt="profile"/>
+                        <img class="img-sm rounded-circle image-layer-item" src="{{asset('images/faces/face5.jpg')}}" alt="profile"/>
+                        <img class="img-sm rounded-circle image-layer-item" src="{{asset('images/faces/face8.jpg')}}" alt="profile"/>
                       </div>
                     </li>
                     <li>
@@ -194,7 +194,7 @@
                             </div>
                           </td>
                           <td class="py-1">
-                            <img src="images/faces/face13.jpg" alt="profile" class="img-sm rounded-circle"/>
+                            <img src="{{asset('images/faces/face13.jpg')}}" alt="profile" class="img-sm rounded-circle"/>
                           </td>
                           <td class="font-weight-bold">
                             Andrew Bowen
@@ -218,7 +218,7 @@
                             </div>
                           </td>
                           <td class="py-1">
-                            <img src="images/faces/face2.jpg" alt="profile" class="img-sm rounded-circle"/>
+                            <img src="{{asset('images/faces/face2.jpg')}}" alt="profile" class="img-sm rounded-circle"/>
                           </td>
                           <td class="font-weight-bold">
                             Mae Saunders
@@ -266,7 +266,7 @@
                             </div>
                           </td>
                           <td class="py-1">
-                            <img src="images/faces/face11.html" alt="profile" class="img-sm rounded-circle"/>
+                            <img src="{{asset('images/faces/face11.html')}}" alt="profile" class="img-sm rounded-circle"/>
                           </td>
                           <td class="font-weight-bold">
                             Marguerite Phillips
@@ -517,7 +517,7 @@
                       <tbody>
                         <tr>
                           <td class="py-1">
-                            <img src="images/faces/face1.jpg" alt="profile" class="img-sm rounded-circle"/>
+                            <img src="{{asset('images/faces/face1.jpg')}}" alt="profile" class="img-sm rounded-circle"/>
                           </td>
                           <td>
                             South Shyanne
@@ -528,7 +528,7 @@
                         </tr>
                         <tr>
                           <td class="py-1">
-                            <img src="images/faces/face2.jpg" alt="profile" class="img-sm rounded-circle"/>
+                            <img src="{{asset('images/faces/face2.jpg')}}" alt="profile" class="img-sm rounded-circle"/>
                           </td>
                           <td>
                             New Trystan
@@ -539,7 +539,7 @@
                         </tr>
                         <tr>
                           <td class="py-1">
-                            <img src="images/faces/face3.jpg" alt="profile" class="img-sm rounded-circle"/>
+                            <img src="{{asset('images/faces/face3.jpg')}}" alt="profile" class="img-sm rounded-circle"/>
                           </td>
                           <td>
                             East Helga
@@ -550,7 +550,7 @@
                         </tr>
                         <tr>
                           <td class="py-1">
-                            <img src="images/faces/face4.jpg" alt="profile" class="img-sm rounded-circle"/>
+                            <img src="{{asset('images/faces/face4.')}}" alt="profile" class="img-sm rounded-circle"/>
                           </td>
                           <td>
                             Omerbury
