@@ -63,8 +63,9 @@
                             <td>{{ $show->Role}}</td>
                             <td>{{ $show-> Email}}</td>
                             <td style="padding-left: 2em">
-                                <a href="{{url('edit/'.$show->id)}}" ><button type="button"  style="padding:0.8em 2em" class="btn btn-primary">Edit<i class="fa-light fa-comment-pen"></i></button></a>
-                                <button type="button"  style="padding:0.8em 2em" class="btn btn-danger">Delete<i class="fa fa-trash"></i></button>
+
+                                <a href="{{url('/dashboard/user/edit/'.$show->id)}}" ><button type="button"  style="padding:0.8em 2em" class="btn btn-primary">Edit<i class="fa-light fa-comment-pen"></i></button></a>
+                                <a href="{{url('/dashboard/user/delete/' .$show->id)}}" ><button type="button"  style="padding:0.8em 2em" class="btn btn-danger">Delete<i class="fa fa-trash"></i></button>
                                 <button type="button"  style="padding:0.8em 2em" class="btn btn-warning">view<i class="fa-regular fa-eye"></i></button>
                             </td>
                         </tr>

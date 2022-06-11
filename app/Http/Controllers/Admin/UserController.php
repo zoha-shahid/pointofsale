@@ -83,7 +83,7 @@ class UserController extends Controller
         return Excel::download(new UsersExport, 'users.csv');
     }
     public function editdata($id){
-        $shows= adduser::find($id);
+        $shows= User::find($id);
         // dd($shows);
         return view('admin.UserManagement.Users.edit_user')->with(compact('shows'));
     }
@@ -127,9 +127,14 @@ class UserController extends Controller
                 'Permanent_Address' => $data['Permanent_Address'],
                 'Current_Address' => $data['Current_Address']
             );
-            DB::table('addusers')->where('id', $data['id'])->update($da);
-
-            return redirect('/list');
+            DB::table('users')->where('id', $data['id'])->update($da);
+            return redirect('/dashboard/user/list');
     }
+    public function deleteuser(User $shows, $id = null)
+{
+    User::where('id', $id)->delete();
+    // Alert::success('Deleated sucessfully', 'Success Message');
+    return redirect('/dashboard/user/list');
+}
 
 }

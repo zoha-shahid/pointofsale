@@ -1,10 +1,9 @@
 @extends('Admin.layouts.master')
 @section('content')
     <!-- partial -->
-    <link rel="stylesheet" href="{{asset('https://pos.ultimatefosters.com/css/vendor.css?v=477')}}">
-
+    {{-- <link rel="stylesheet" href="{{asset('https://pos.ultimatefosters.com/css/vendor.css?v=477')}}"> --}}
     <!-- app css -->
-    <link rel="stylesheet" href="{{asset('https://pos.ultimatefosters.com/css/app.css?v=477')}}">
+    {{-- <link rel="stylesheet" href="{{asset('https://pos.ultimatefosters.com/css/app.css?v=477')}}"> --}}
       <!-- partial -->
       <div class="main-panel">
         <div class="content-wrapper">
@@ -87,7 +86,5 @@
 <!-- Custom js for this page-->
 <script src="../../js/data-table.js"></script>
 <!-- End custom js for this page-->
-
-
 </div>
-@endsection
+

@@ -32,6 +32,9 @@ Route::group(array('prefix' => 'dashboard'), function () {
         Route::get('excel', [UserController::class, 'ExportExcel']);
         Route::get('csv', [UserController::class, 'ExportCSV']);
         Route::get('col', [UserController::class, 'col']);
+        Route::get('edit/{id}',[UserController::class, 'editdata']);
+        Route::post('edit/{id}',[UserController::class, 'usereditdata']);
+        Route::get('delete/{id}',[UserController::class,'deleteuser']);
     });
     Route::group(['prefix' =>'Role'], function(){
         Route::get('add',[RoleController::class, 'index']);
@@ -63,6 +66,6 @@ Route::group(array('prefix' => 'dashboard'), function () {
 
 
  // nim
- Route::get('edit/{id}',[UserController::class, 'editdata']);
- Route::post('edit/{id}',[UserController::class, 'usereditdata']);
+//  Route::get('edit/{id}',[UserController::class, 'editdata']);
+//  Route::post('edit/{id}',[UserController::class, 'usereditdata']);
 
