@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use App\Models\Sales;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class SalesController extends Controller
 {
@@ -26,4 +27,47 @@ class SalesController extends Controller
         $adduser->save();
         return redirect('/dashboard/Sales/add')->with('flash_message_success', 'product Added Successfully!!');
     }
+    //   public function edit(Request $request, $id){
+    //         $data = $request->all();
+    //         $da = array(
+    //             'Prefix' => $data['Prefix'],
+    //             'first_name' => $data['first_name'],
+    //             'last_name' => $data['last_name'],
+    //             'email' => $data['email'],
+    //             'number' => $data['number'],
+    //             'Commission_Percentage' => $data['Commission_Percentage'],
+    //             'permanent_address' => $data['permanent_address'],
+    //         );
+    //         DB::table('sales')->where('id', $data['id'])->update($da);
+    //         return redirect('/dashboard/Sales/add');
+    // }
+    public function edit(Request $request, $id)
+    {
+        $student = Sales::find($id);
+        $student->Prefix = $request->input('Prefix');
+        $student->first_name = $request->input('first_name');
+        $student->last_name = $request->input('last_name');
+        $student->email= $request->input('email');
+        $student->number= $request->input('number');
+        $student->Commission_Percentage= $request->input('Commission_Percentage');
+        $student->permanent_address= $request->input('permanent_address');
+        $student->update();
+        return redirect()->back()->with('status','Student Updated Successfully');
+    }
+
+
+    public function viewSales()
+{
+    $shows = Sales::get();
+
+    return view('Admin.UserManagement.Sales.list')->with(compact('shows'));;
 }
+public function editdata(Request $request, $id)
+{
+$data=$request->id;
+$shows=DB::table('sales')->where('id',$data)->get();
+    return view('Admin.UserManagement.Sales.Edit_Sales')->with(compact('shows'));
+}
+
+}
+

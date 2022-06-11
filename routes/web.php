@@ -41,10 +41,11 @@ Route::group(array('prefix' => 'dashboard'), function () {
     Route::group(['prefix' =>'Sales'], function(){
         Route::get('add',[SalesController::class, 'index']);
         Route::post('add',[SalesController::class, 'addForm']);
+        Route::get('list',[SalesController::class, 'viewSales']);
+        Route::get('edit/{id}',[SalesController::class, 'editdata']);
+        Route::post('edit/{id}',[SalesController::class, 'edit']);
     });
 });
-
-
 
 
 
