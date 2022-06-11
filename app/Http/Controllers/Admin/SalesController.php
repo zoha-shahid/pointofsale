@@ -25,22 +25,9 @@ class SalesController extends Controller
         $adduser->Commission_Percentage= $data['Commission_Percentage'];
         $adduser->permanent_address= $data['permanent_address'];
         $adduser->save();
-        return redirect('/dashboard/Sales/add')->with('flash_message_success', 'product Added Successfully!!');
+        return redirect('/dashboard/Sales/list')->with('flash_message_success', 'product Added Successfully!!');
     }
-    //   public function edit(Request $request, $id){
-    //         $data = $request->all();
-    //         $da = array(
-    //             'Prefix' => $data['Prefix'],
-    //             'first_name' => $data['first_name'],
-    //             'last_name' => $data['last_name'],
-    //             'email' => $data['email'],
-    //             'number' => $data['number'],
-    //             'Commission_Percentage' => $data['Commission_Percentage'],
-    //             'permanent_address' => $data['permanent_address'],
-    //         );
-    //         DB::table('sales')->where('id', $data['id'])->update($da);
-    //         return redirect('/dashboard/Sales/add');
-    // }
+
     public function edit(Request $request, $id)
     {
         $student = Sales::find($id);
@@ -52,7 +39,7 @@ class SalesController extends Controller
         $student->Commission_Percentage= $request->input('Commission_Percentage');
         $student->permanent_address= $request->input('permanent_address');
         $student->update();
-        return redirect()->back()->with('status','Student Updated Successfully');
+        return redirect('/dashboard/Sales/list')->with('status','Student Updated Successfully');
     }
 
 
@@ -68,6 +55,11 @@ $data=$request->id;
 $shows=DB::table('sales')->where('id',$data)->get();
     return view('Admin.UserManagement.Sales.Edit_Sales')->with(compact('shows'));
 }
-
+public function deletesales(Sales $shows, $id = null)
+{
+    Sales::where('id', $id)->delete();
+    // Alert::success('Deleated sucessfully', 'Success Message');
+    return redirect('/dashboard/Sales/list');
+}
 }
 

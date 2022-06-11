@@ -73,7 +73,7 @@
                             <td>{{$show->Commission_Percentage}}</td>
                             <td style="padding-left:2em">
                                 <a href="{{url('/dashboard/Sales/edit/' .$show->id )}}"><button type="button"  style="padding:0.8em 2em" class="btn btn-primary">Edit<i class="fa-light fa-comment-pen"></i></button></a>
-                                <button type="button"  style="padding:0.8em 2em" class="btn btn-danger">Delete<i class="fa fa-trash"></i></button>
+                                <a href="{{url('/dashboard/Sales/delete/' .$show->id )}}"> <button type="button"  style="padding:0.8em 2em" class="btn btn-danger">Delete<i class="fa fa-trash"></i></button>
                                 <button type="button"  style="padding:0.8em 2em" class="btn btn-warning">view<i class="fa-regular fa-eye"></i></button>
                             </td>
                         </tr>

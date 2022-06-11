@@ -44,7 +44,9 @@ Route::group(array('prefix' => 'dashboard'), function () {
         Route::get('list',[SalesController::class, 'viewSales']);
         Route::get('edit/{id}',[SalesController::class, 'editdata']);
         Route::post('edit/{id}',[SalesController::class, 'edit']);
+        Route::get('delete/{id}',[SalesController::class,'deletesales']);
     });
+
 });
 
 
