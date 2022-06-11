@@ -22,15 +22,18 @@
                     </div>
                     <div class="col-md-6">
 
-                            <a href="{{ URL::to('dashboard/user/pdf') }}">
-                                <button type="button" class="btn btn-danger btn-sm"> <i class="far fa-file-pdf"></i> PDF</button>
-                            </a>
-                            <a href="{{ URL::to('dashboard/user/excel') }}">
-                                <button type="button" class="btn btn-success btn-sm"><i class="far fa-file-excel"></i> Excel</button>
-                            </a>
-                            <a href="{{ URL::to('dashboard/user/csv') }}">
-                                <button type="button" class="btn btn-success btn-sm"><i class="far fa-file"></i> CSV</button>
-                            </a>
+                        <a href="{{ URL::to('dashboard/user/pdf') }}">
+                            <button type="button" class="btn btn-danger btn-sm"> <i class="far fa-file-pdf"></i> PDF</button>
+                        </a>
+                        <a href="{{ URL::to('dashboard/user/excel') }}">
+                            <button type="button" class="btn btn-success btn-sm"><i class="far fa-file-excel"></i> Excel</button>
+                        </a>
+                        <a href="{{ URL::to('dashboard/user/csv') }}">
+                            <button type="button" class="btn btn-success btn-sm"><i class="far fa-file"></i> CSV</button>
+                        </a>
+                        <a href="{{ URL::to('dashboard/user/print') }}" target="_blank">
+                            <button type="button" class="btn btn-danger btn-sm"> <i class="fa fa-print"></i> Print</button>
+                        </a>
                     </div>
                     <div class="col-2">
                         <div class="btn-group">

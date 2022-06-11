@@ -131,10 +131,15 @@ class UserController extends Controller
             return redirect('/dashboard/user/list');
     }
     public function deleteuser(User $shows, $id = null)
-{
-    User::where('id', $id)->delete();
-    // Alert::success('Deleated sucessfully', 'Success Message');
-    return redirect('/dashboard/user/list');
-}
+    {
+        User::where('id', $id)->delete();
+        // Alert::success('Deleated sucessfully', 'Success Message');
+        return redirect('/dashboard/user/list');
+    }
+    public  function ExportPrint(){
+        $data = User::get()->toArray();
+        return view('admin.UserManagement.Users.print', compact('data'));
+        return 0;
+    }
 
 }
