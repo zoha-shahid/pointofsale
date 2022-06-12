@@ -6,7 +6,7 @@ use App\Http\Controllers\Admin\SalesController;
 use App\Models\User;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\DashboardController;
-
+use App\Http\Controllers\admin\Supplierscontroller;
 
 /*
 |--------------------------------------------------------------------------
@@ -50,7 +50,10 @@ Route::group(array('prefix' => 'dashboard'), function () {
         Route::post('edit/{id}',[SalesController::class, 'edit']);
         Route::get('delete/{id}',[SalesController::class,'deletesales']);
     });
+    Route::group(['prefix' =>'Suppliers'], function(){
+        Route::get('list',[Supplierscontroller::class, 'index']);
 
+    });
 });
 
 

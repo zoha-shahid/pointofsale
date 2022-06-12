@@ -44,12 +44,12 @@
       <li class="nav-item d-none d-lg-block">
         <a class="nav-link" data-toggle="collapse" href="#sidebar-layouts" aria-expanded="false" aria-controls="sidebar-layouts">
           <i class="fas fa-columns menu-icon"></i>
-          <span class="menu-title">Sidebar Layouts</span>
+          <span class="menu-title">Contacts</span>
           <i class="menu-arrow"></i>
         </a>
         <div class="collapse" id="sidebar-layouts">
           <ul class="nav flex-column sub-menu">
-            <li class="nav-item"> <a class="nav-link" href="pages/layout/compact-menu.html">Compact menu</a></li>
+            <li class="nav-item"> <a class="nav-link" href="{{ URL::to('dashboard/Suppliers/list')}}">Suppliers</a></li>
             <li class="nav-item"> <a class="nav-link" href="pages/layout/sidebar-collapsed.html">Icon menu</a></li>
             <li class="nav-item"> <a class="nav-link" href="pages/layout/sidebar-hidden.html">Sidebar Hidden</a></li>
             <li class="nav-item"> <a class="nav-link" href="pages/layout/sidebar-hidden-overlay.html">Sidebar Overlay</a></li>
