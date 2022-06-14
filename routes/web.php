@@ -69,4 +69,5 @@ Route::group(array('prefix' => 'dashboard'), function () {
  // nim
 //  Route::get('edit/{id}',[UserController::class, 'editdata']);
 //  Route::post('edit/{id}',[UserController::class, 'usereditdata']);
+ Route::get('view',[UserController::class,'View']);
 
