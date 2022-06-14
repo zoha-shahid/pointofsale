@@ -13,4 +13,8 @@ class Supplierscontroller extends Controller
     {
         return view('Admin.Contacts.Suppliers.list_Suppliers');
     }
+    public function show()
+    {
+        return view('Admin.Contacts.Suppliers.add_Suppliers');
+    }
 }

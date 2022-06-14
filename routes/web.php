@@ -52,12 +52,12 @@ Route::group(array('prefix' => 'dashboard'), function () {
     });
     Route::group(['prefix' =>'Suppliers'], function(){
         Route::get('list',[Supplierscontroller::class, 'index']);
-
+        // Route::get('add',[Supplierscontroller::class, 'show']);
     });
 });
 
 
-
+Route::get('add',[Supplierscontroller::class, 'show']);
 
 
 

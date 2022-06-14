@@ -35,7 +35,7 @@
                     <div class="col-2">
                         <div class="btn-group">
 
-                            <div class="buttonexport" id="buttonlist">
+                            <div class="buttonexport" data-target="#mymodel" data-toggle="modal" id="buttonlist">
                                 <button type="button" style="background-color: #392c70; border: none; border-radius: 8px; margin-bottom:2em">
                                     <a class="btn btn-add" style="color:#fff" href="{{ URL::to('dashboard/Sales/add') }}">
                                         <i class="fa fa-plus" style="color:white"></i>Add Sales </a></button>
