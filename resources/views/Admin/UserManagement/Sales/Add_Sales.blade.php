@@ -1,6 +1,7 @@
 @extends('Admin.layouts.master')
 @section('content')
     <!-- partial -->
+   
     <div class="main-panel">
         <div class="content-wrapper">
             <div class="page-header">
@@ -85,6 +86,7 @@
                                     </form>  </div>
                         </div>
                         </div>
+
                         {{-- end --}}
 
 
