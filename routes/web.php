@@ -67,10 +67,5 @@ Route::get('add',[Supplierscontroller::class, 'show']);
 
 
 
-
-
- // nim
-//  Route::get('edit/{id}',[UserController::class, 'editdata']);
-//  Route::post('edit/{id}',[UserController::class, 'usereditdata']);
  Route::get('view',[UserController::class,'View']);
 
