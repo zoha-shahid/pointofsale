@@ -181,3 +181,13 @@
     })
 </script>
 {{-- end for the roll part --}}
+{{-- for filter in contact page --}}
+<script>
+    $(document).ready(function(){
+      $("button").click(function(){
+        $("#filter").toggle();
+      });
+    });
+    </script>
+    {{-- end --}}
+
