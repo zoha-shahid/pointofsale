@@ -141,7 +141,7 @@ class UserController extends Controller
         return view('admin.UserManagement.Users.print', compact('data'));
         return 0;
     }
-    public function View()
+    public function view()
     {
         return view('admin.UserManagement.Users.view');
     }
