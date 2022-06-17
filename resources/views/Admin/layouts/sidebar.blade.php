@@ -50,7 +50,7 @@
         <div class="collapse" id="sidebar-layouts">
           <ul class="nav flex-column sub-menu">
             <li class="nav-item"> <a class="nav-link" href="{{ URL::to('dashboard/Suppliers/list')}}">Suppliers</a></li>
-            <li class="nav-item"> <a class="nav-link" href="pages/layout/sidebar-collapsed.html">Customers</a></li>
+            <li class="nav-item"> <a class="nav-link" href="{{ URL::to('dashboard/Contact/list')}}">Customers</a></li>
             <li class="nav-item"> <a class="nav-link" href="pages/layout/sidebar-hidden.html">Customer Groups</a></li>
             <li class="nav-item"> <a class="nav-link" href="pages/layout/sidebar-hidden-overlay.html">Import Contacts</a></li>
             {{-- <li class="nav-item"> <a class="nav-link" href="pages/layout/sidebar-fixed.html">Sidebar Fixed</a></li> --}}

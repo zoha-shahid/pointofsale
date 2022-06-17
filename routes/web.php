@@ -7,6 +7,7 @@ use App\Models\User;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\admin\Supplierscontroller;
+use App\Http\Controllers\admin\CustomerController;
 
 /*
 |--------------------------------------------------------------------------
@@ -54,6 +55,10 @@ Route::group(array('prefix' => 'dashboard'), function () {
     Route::group(['prefix' =>'Suppliers'], function(){
         Route::get('list',[Supplierscontroller::class, 'index']);
         Route::get('add',[Supplierscontroller::class, 'show']);
+    });
+    Route::group(['prefix' =>'Contact'], function(){
+        Route::get('list',[CustomerController::class, 'index']);
+
     });
 });
 
