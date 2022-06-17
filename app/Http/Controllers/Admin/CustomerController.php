@@ -12,4 +12,10 @@ class CustomerController extends Controller
     {
         return view('Admin.Contacts.Customer.list_customer');
     }
+
+    public function view()
+    {
+        // $shows = ContactGroup::get();
+        return view('Admin.Contacts.CustomerGroups.list_customergroup');
+    }
 }

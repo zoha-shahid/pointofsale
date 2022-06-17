@@ -58,6 +58,7 @@ Route::group(array('prefix' => 'dashboard'), function () {
     });
     Route::group(['prefix' =>'Contact'], function(){
         Route::get('list',[CustomerController::class, 'index']);
+        Route::get('show',[CustomerController::class, 'view']);
 
     });
 });
