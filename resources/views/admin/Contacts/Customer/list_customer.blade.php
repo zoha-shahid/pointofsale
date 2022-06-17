@@ -4,7 +4,7 @@
         <div class="content-wrapper">
             <div class="page-header">
                 <h3 class="page-title" style="position: absolute; top:50%; left:50% ;transform=translate(-50%,-50%);">
-                    <h3> Suppliers <small>Manage your Suppliers</small></h3>
+                    <h3> Customers<small> Manage your Customers</small></h3>
                 </h3>
                 {{-- zoy --}}
 
@@ -46,30 +46,59 @@
                                                                 <div class="col-md-3">
                                                                     <input class="form-check-input" type="checkbox" id="inlineCheckbox1"
                                                                         value="option1" />
-                                                                    <label class="form-check-label" for="inlineCheckbox1">Purchase Due</label>
+                                                                    <label class="form-check-label" for="inlineCheckbox1">Sell Due</label>
                                                                 </div>
 
                                                                 <div class="col-md-3">
                                                                     <input class="form-check-input" type="checkbox" id="inlineCheckbox2"
                                                                         value="option2" />
-                                                                    <label class="form-check-label" for="inlineCheckbox2">Purchase Return</label>
+                                                                    <label class="form-check-label" for="inlineCheckbox2">Sell Return</label>
 
                                                                 </div>
                                                                 <div class="col-md-3">
                                                                     <input class="form-check-input" type="checkbox" id="inlineCheckbox2"
                                                                         value="option2" />
-                                                                    <label class="form-check-label" for="inlineCheckbox2">Advance Balance</label>
+                                                                    <label class="form-check-label" for="inlineCheckbox2"> Advance Balance</label>
 
                                                                 </div>
                                                                 <div class="col-md-3">
                                                                     <input class="form-check-input" type="checkbox" id="inlineCheckbox2"
                                                                         value="option2" />
-                                                                    <label class="form-check-label" for="inlineCheckbox2"> Opening Balance</label>
+                                                                    <label class="form-check-label" for="inlineCheckbox2">Opening Balance</label>
 
                                                                 </div>
                                                             </div>
                                                             <br>
                                                             <div class="row">
+                                                                <div class="col-md-4">
+                                                                    <div class="form-group">
+                                                                        <label for="Status">Has no sell from:</label>
+                                                                        <i class="fa fa-info-circle text-info hover-q no-print " aria-hidden="true"
+                                                                            data-container="body" data-toggle="popover" data-placement="auto bottom"
+                                                                            data-content="Check/Uncheck to make a user active/inactive."
+                                                                            data-html="true" data-trigger="hover"></i>
+                                                                        <select name="Suppliers" id="" class="form-control">
+                                                                            <option selected value="Admin">Please Select</option>
+                                                                            <option value="Admin">One Month</option>
+                                                                            <option value="Cashier">Three Months</option>
+                                                                            <option value="Cashier">Six Months</option>
+                                                                            <option value="Cashier">One Year</option>
+                                                                        </select>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-md-4">
+                                                                    <div class="form-group">
+                                                                        <label for="Status">Customer Group:</label>
+                                                                        <i class="fa fa-info-circle text-info hover-q no-print " aria-hidden="true"
+                                                                            data-container="body" data-toggle="popover" data-placement="auto bottom"
+                                                                            data-content="Check/Uncheck to make a user active/inactive."
+                                                                            data-html="true" data-trigger="hover"></i>
+                                                                        <select name="Suppliers" id="" class="form-control">
+                                                                            <option selected value="Admin">None</option>
+
+                                                                        </select>
+                                                                    </div>
+                                                                </div>
                                                                 <div class="col-md-4">
                                                                     <div class="form-group">
                                                                         <label for="Status">Status</label>
