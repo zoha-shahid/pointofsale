@@ -8,7 +8,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\admin\Supplierscontroller;
 use App\Http\Controllers\admin\CustomerController;
-
+use App\Http\Controllers\admin\ContactController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -59,6 +59,10 @@ Route::group(array('prefix' => 'dashboard'), function () {
     Route::group(['prefix' =>'Contact'], function(){
         Route::get('list',[CustomerController::class, 'index']);
         Route::get('show',[CustomerController::class, 'view']);
+
+    });
+    Route::group(['prefix' =>'ImportContact'], function(){
+        Route::get('show',[ContactController::class, 'listimport']);
 
     });
 });

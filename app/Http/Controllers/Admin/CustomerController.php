@@ -18,4 +18,6 @@ class CustomerController extends Controller
         // $shows = ContactGroup::get();
         return view('Admin.Contacts.CustomerGroups.list_customergroup');
     }
+
+
 }
