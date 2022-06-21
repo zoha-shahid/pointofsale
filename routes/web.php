@@ -36,6 +36,7 @@ Route::group(array('prefix' => 'dashboard'), function () {
         Route::get('edit/{id}',[UserController::class, 'editdata']);
         Route::post('edit/{id}',[UserController::class, 'usereditdata']);
         Route::get('delete/{id}',[UserController::class,'deleteuser']);
+        Route::get('view',[UserController::class,'view']);
     });
     Route::group(['prefix' =>'Role'], function(){
         Route::get('add',[RoleController::class, 'index']);
@@ -52,20 +53,7 @@ Route::group(array('prefix' => 'dashboard'), function () {
     });
     Route::group(['prefix' =>'Suppliers'], function(){
         Route::get('list',[Supplierscontroller::class, 'index']);
-        // Route::get('add',[Supplierscontroller::class, 'show']);
+        Route::get('add',[Supplierscontroller::class, 'show']);
     });
 });
-
-
-Route::get('add',[Supplierscontroller::class, 'show']);
-
-
-
-
-
-
-
-
-
- Route::get('view',[UserController::class,'View']);
 
