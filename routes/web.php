@@ -62,7 +62,7 @@ Route::group(array('prefix' => 'dashboard'), function () {
 
     });
     Route::group(['prefix' =>'ImportContact'], function(){
-        Route::get('show',[ContactController::class, 'listimport']);
+     Route::get('show',[ContactController::class, 'listimport']);
 
     });
 });

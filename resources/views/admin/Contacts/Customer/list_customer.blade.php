@@ -163,22 +163,23 @@
                         <table class="table table-bordered table-striped table" id="order-listing">
                             <thead>
                                 <tr>
-
                                     <th>Action</th>
                                     <th>Contact ID</th>
-                                    <th>Business Name</th>
-                                    <th>Name</th>
-                                    <th>Email</th>
-                                    <th>Tax number</th>
-                                    <th>Pay term</th>
-                                    <th>Opening Balance</th>
-                                    <th>Advance Balance</th>
-                                    <th>Added On</th>
-                                    <th>Address</th>
-                                    <th>Mobile</th>
-                                    <th>Total Purchase Due</th>
-                                    <th>Total Purchase Return Due</th>
-                                    <th>
+                                                                <th>Business Name</th>
+                                        <th>Name</th>
+                                        <th>Email</th>
+                                        <th>Tax number</th>
+                                        <th>Credit Limit</th>
+                                        <th>Pay term</th>
+                                        <th>Opening Balance</th>
+                                        <th>Advance Balance</th>
+                                        <th>Added On</th>
+                                                                    <th>Customer Group</th>
+                                        <th>Address</th>
+                                        <th>Mobile</th>
+                                        <th>Total Sale Due</th>
+                                        <th>Total Sell Return Due</th>
+                                                                                    <th>
                                         Custom Field 1
                                     </th>
                                     <th>
