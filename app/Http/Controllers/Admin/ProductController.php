@@ -12,4 +12,10 @@ class ProductController extends Controller
         // $shows = ContactGroup::get();
         return view('Admin.products.list');
     }
+
+    public function add()
+    {
+        // $shows = ContactGroup::get();
+        return view('Admin.products.add');
+    }
 }

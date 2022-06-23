@@ -66,7 +66,7 @@
         <div class="collapse" id="ui-basic">
           <ul class="nav flex-column sub-menu">
             <li class="nav-item"> <a class="nav-link" href="{{ URL::to('dashboard/Product/list')}}">List Products</a></li>
-            <li class="nav-item"> <a class="nav-link" href="pages/ui-features/buttons.html">Add Products</a></li>
+            <li class="nav-item"> <a class="nav-link" href="{{ URL::to('dashboard/Product/add')}}">Add Products</a></li>
             <li class="nav-item"> <a class="nav-link" href="pages/ui-features/badges.html">Print Lables</a></li>
             <li class="nav-item"> <a class="nav-link" href="pages/ui-features/breadcrumbs.html">Variations</a></li>
             <li class="nav-item"> <a class="nav-link" href="pages/ui-features/dropdowns.html">Import Products</a></li>

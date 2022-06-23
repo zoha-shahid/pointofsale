@@ -71,6 +71,7 @@ Route::group(array('prefix' => 'dashboard'), function () {
     });
     Route::group(['prefix' =>'Product'], function(){
         Route::get('list',[ProductController::class, 'list']);
+        Route::get('add',[ProductController::class, 'add']);
 
        });
 });
