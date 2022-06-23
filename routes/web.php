@@ -9,6 +9,10 @@ use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\admin\Supplierscontroller;
 use App\Http\Controllers\admin\CustomerController;
 use App\Http\Controllers\admin\ContactController;
+use App\Http\Controllers\admin\ProductController;
+
+
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -65,5 +69,9 @@ Route::group(array('prefix' => 'dashboard'), function () {
      Route::get('show',[ContactController::class, 'listimport']);
 
     });
+    Route::group(['prefix' =>'Product'], function(){
+        Route::get('list',[ProductController::class, 'list']);
+
+       });
 });
 

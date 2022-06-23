@@ -60,22 +60,22 @@
       <li class="nav-item">
         <a class="nav-link" data-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
           <i class="far fa-compass menu-icon"></i>
-          <span class="menu-title">Basic UI Elements</span>
+          <span class="menu-title">Products</span>
           <i class="menu-arrow"></i>
         </a>
         <div class="collapse" id="ui-basic">
           <ul class="nav flex-column sub-menu">
-            <li class="nav-item"> <a class="nav-link" href="pages/ui-features/accordions.html">Accordions</a></li>
-            <li class="nav-item"> <a class="nav-link" href="pages/ui-features/buttons.html">Buttons</a></li>
-            <li class="nav-item"> <a class="nav-link" href="pages/ui-features/badges.html">Badges</a></li>
-            <li class="nav-item"> <a class="nav-link" href="pages/ui-features/breadcrumbs.html">Breadcrumbs</a></li>
-            <li class="nav-item"> <a class="nav-link" href="pages/ui-features/dropdowns.html">Dropdowns</a></li>
-            <li class="nav-item"> <a class="nav-link" href="pages/ui-features/modals.html">Modals</a></li>
-            <li class="nav-item"> <a class="nav-link" href="pages/ui-features/progress.html">Progress bar</a></li>
-            <li class="nav-item"> <a class="nav-link" href="pages/ui-features/pagination.html">Pagination</a></li>
-            <li class="nav-item"> <a class="nav-link" href="pages/ui-features/tabs.html">Tabs</a></li>
-            <li class="nav-item"> <a class="nav-link" href="pages/ui-features/typography.html">Typography</a></li>
-            <li class="nav-item"> <a class="nav-link" href="pages/ui-features/tooltips.html">Tooltips</a></li>
+            <li class="nav-item"> <a class="nav-link" href="{{ URL::to('dashboard/Product/list')}}">List Products</a></li>
+            <li class="nav-item"> <a class="nav-link" href="pages/ui-features/buttons.html">Add Products</a></li>
+            <li class="nav-item"> <a class="nav-link" href="pages/ui-features/badges.html">Print Lables</a></li>
+            <li class="nav-item"> <a class="nav-link" href="pages/ui-features/breadcrumbs.html">Variations</a></li>
+            <li class="nav-item"> <a class="nav-link" href="pages/ui-features/dropdowns.html">Import Products</a></li>
+            <li class="nav-item"> <a class="nav-link" href="pages/ui-features/modals.html">Import Opening Stock</a></li>
+            <li class="nav-item"> <a class="nav-link" href="pages/ui-features/progress.html">Selling Price Group</a></li>
+            <li class="nav-item"> <a class="nav-link" href="pages/ui-features/pagination.html">Units</a></li>
+            <li class="nav-item"> <a class="nav-link" href="pages/ui-features/tabs.html">Categories</a></li>
+            <li class="nav-item"> <a class="nav-link" href="pages/ui-features/typography.html">Brands</a></li>
+            <li class="nav-item"> <a class="nav-link" href="pages/ui-features/tooltips.html">Warranties</a></li>
           </ul>
           </div>
       </li>
