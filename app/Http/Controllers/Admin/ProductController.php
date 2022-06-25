@@ -54,4 +54,9 @@ class ProductController extends Controller
     {
         return view('Admin.products.brand');
     }
+
+    public function warranties()
+    {
+        return view('Admin.products.warranties');
+    }
 }

@@ -79,6 +79,7 @@ Route::group(array('prefix' => 'dashboard'), function () {
         Route::get('unit',[ProductController::class, 'unit']);
         Route::get('catgry',[ProductController::class, 'catgry']);
         Route::get('brand',[ProductController::class, 'brand']);
+        Route::get('warranties',[ProductController::class, 'warranties']);
        });
 });
 
