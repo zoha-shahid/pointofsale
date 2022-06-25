@@ -50,4 +50,8 @@ class ProductController extends Controller
         return view('Admin.products.categories');
     }
 
+    public function brand()
+    {
+        return view('Admin.products.brand');
+    }
 }

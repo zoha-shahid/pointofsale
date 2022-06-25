@@ -74,7 +74,7 @@
             <li class="nav-item"> <a class="nav-link" href="pages/ui-features/progress.html">Selling Price Group</a></li>
             <li class="nav-item"> <a class="nav-link" href="{{ URL::to('dashboard/Product/unit')}}">Units</a></li>
             <li class="nav-item"> <a class="nav-link" href="{{ URL::to('dashboard/Product/catgry')}}">Categories</a></li>
-            <li class="nav-item"> <a class="nav-link" href="pages/ui-features/typography.html">Brands</a></li>
+            <li class="nav-item"> <a class="nav-link" href="{{ URL::to('dashboard/Product/brand')}}">Brands</a></li>
             <li class="nav-item"> <a class="nav-link" href="pages/ui-features/tooltips.html">Warranties</a></li>
           </ul>
           </div>

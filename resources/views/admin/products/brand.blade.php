@@ -5,7 +5,7 @@
         <div class="content-wrapper">
             <div class="page-header">
                 <h3 class="page-title">
-                    Categories Manage your categories
+                    Brands Manage your brands
                 </h3>
                 <nav aria-label="breadcrumb">
                     <ol class="breadcrumb">
@@ -18,8 +18,8 @@
                 <div class="card-body">
                     <div class="row">
                         <div class="col-4">
-                            {{-- <h4 class="card-title"><b>All your units
-                            </b></h4> --}}
+                            <h4 class="card-title"><b>All your brands
+                            </b></h4>
                         </div>
                         <div class="col-md-6">
 
@@ -131,10 +131,9 @@
                     <table id="order-listing" class="table">
                         <thead>
                             <tr>
-                                <th> Category </th>
-                                <th>Category Code</th>
-                            <th>Description</th>
-<th>Action</th>
+                                <th>Brands</th>
+                                <th>Note</th>
+                                <th>Action</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -142,7 +141,7 @@
                             <tr>
                                 <td>zoi & nim</td>
                                 <td>cool</td>
-                                <td>100%</td>
+
 
 
                                 <td style="padding-left: 2em">
