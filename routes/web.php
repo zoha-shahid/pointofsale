@@ -77,6 +77,7 @@ Route::group(array('prefix' => 'dashboard'), function () {
         Route::get('import',[ProductController::class, 'import']);
         Route::get('importstock',[ProductController::class, 'importstock']);
         Route::get('unit',[ProductController::class, 'unit']);
+        Route::get('catgry',[ProductController::class, 'catgry']);
        });
 });
 

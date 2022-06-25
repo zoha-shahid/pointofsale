@@ -45,6 +45,9 @@ class ProductController extends Controller
         return view('Admin.products.units');
     }
 
-
+    public function catgry()
+    {
+        return view('Admin.products.categories');
+    }
 
 }
