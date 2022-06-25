@@ -32,7 +32,7 @@ class ProductController extends Controller
 
     public function import()
     {
-       
+
         return view('Admin.products.import_product');
     }
     public function  importstock()
@@ -40,5 +40,11 @@ class ProductController extends Controller
 
         return view('Admin.products.import_opning_stock');
     }
+    public function  unit()
+    {
+        return view('Admin.products.units');
+    }
+
+
 
 }

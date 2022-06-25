@@ -72,7 +72,7 @@
             <li class="nav-item"> <a class="nav-link" href="{{ URL::to('dashboard/Product/import')}}">Import Products</a></li>
             <li class="nav-item"> <a class="nav-link" href="{{ URL::to('dashboard/Product/importstock')}}">Import Opening Stock</a></li>
             <li class="nav-item"> <a class="nav-link" href="pages/ui-features/progress.html">Selling Price Group</a></li>
-            <li class="nav-item"> <a class="nav-link" href="pages/ui-features/pagination.html">Units</a></li>
+            <li class="nav-item"> <a class="nav-link" href="{{ URL::to('dashboard/Product/unit')}}">Units</a></li>
             <li class="nav-item"> <a class="nav-link" href="pages/ui-features/tabs.html">Categories</a></li>
             <li class="nav-item"> <a class="nav-link" href="pages/ui-features/typography.html">Brands</a></li>
             <li class="nav-item"> <a class="nav-link" href="pages/ui-features/tooltips.html">Warranties</a></li>
