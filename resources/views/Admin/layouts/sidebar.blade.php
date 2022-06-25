@@ -70,7 +70,7 @@
             <li class="nav-item"> <a class="nav-link" href="{{ URL::to('dashboard/Product/lables')}}">Print Lables</a></li>
             <li class="nav-item"> <a class="nav-link" href="{{ URL::to('dashboard/Product/show')}}">Variations</a></li>
             <li class="nav-item"> <a class="nav-link" href="{{ URL::to('dashboard/Product/import')}}">Import Products</a></li>
-            <li class="nav-item"> <a class="nav-link" href="pages/ui-features/modals.html">Import Opening Stock</a></li>
+            <li class="nav-item"> <a class="nav-link" href="{{ URL::to('dashboard/Product/importstock')}}">Import Opening Stock</a></li>
             <li class="nav-item"> <a class="nav-link" href="pages/ui-features/progress.html">Selling Price Group</a></li>
             <li class="nav-item"> <a class="nav-link" href="pages/ui-features/pagination.html">Units</a></li>
             <li class="nav-item"> <a class="nav-link" href="pages/ui-features/tabs.html">Categories</a></li>

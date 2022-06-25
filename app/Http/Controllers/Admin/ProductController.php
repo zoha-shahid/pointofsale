@@ -32,7 +32,13 @@ class ProductController extends Controller
 
     public function import()
     {
-        // $shows = ContactGroup::get();
+       
         return view('Admin.products.import_product');
     }
+    public function  importstock()
+    {
+
+        return view('Admin.products.import_opning_stock');
+    }
+
 }
