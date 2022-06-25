@@ -67,9 +67,9 @@
           <ul class="nav flex-column sub-menu">
             <li class="nav-item"> <a class="nav-link" href="{{ URL::to('dashboard/Product/list')}}">List Products</a></li>
             <li class="nav-item"> <a class="nav-link" href="{{ URL::to('dashboard/Product/add')}}">Add Products</a></li>
-            <li class="nav-item"> <a class="nav-link" href="pages/ui-features/badges.html">Print Lables</a></li>
-            <li class="nav-item"> <a class="nav-link" href="pages/ui-features/breadcrumbs.html">Variations</a></li>
-            <li class="nav-item"> <a class="nav-link" href="pages/ui-features/dropdowns.html">Import Products</a></li>
+            <li class="nav-item"> <a class="nav-link" href="{{ URL::to('dashboard/Product/lables')}}">Print Lables</a></li>
+            <li class="nav-item"> <a class="nav-link" href="{{ URL::to('dashboard/Product/show')}}">Variations</a></li>
+            <li class="nav-item"> <a class="nav-link" href="{{ URL::to('dashboard/Product/import')}}">Import Products</a></li>
             <li class="nav-item"> <a class="nav-link" href="pages/ui-features/modals.html">Import Opening Stock</a></li>
             <li class="nav-item"> <a class="nav-link" href="pages/ui-features/progress.html">Selling Price Group</a></li>
             <li class="nav-item"> <a class="nav-link" href="pages/ui-features/pagination.html">Units</a></li>

@@ -72,7 +72,9 @@ Route::group(array('prefix' => 'dashboard'), function () {
     Route::group(['prefix' =>'Product'], function(){
         Route::get('list',[ProductController::class, 'list']);
         Route::get('add',[ProductController::class, 'add']);
-
+        Route::get('show',[ProductController::class, 'show']);
+        Route::get('lables',[ProductController::class, 'lables']);
+        Route::get('import',[ProductController::class, 'import']);
        });
 });
 

@@ -177,13 +177,14 @@
                                                         <div class="col-md-4">
                                                             <div class="form-group">
                                                                 <strong><label>Contact Type:*</label></strong>
-                                                                <select class="form-control">
+                                                                <select name="contact_type" id="" class="form-control">
                                                                     <option value="">Please select</option>
                                                                     <option value="Suppliers">Suppliers</option>
                                                                     <option value="Customers">Customers</option>
                                                                     <option value="Bot">Both (Supplier & Customer)
                                                                     </option>
                                                                 </select>
+
                                                             </div>
                                                         </div>
                                                         <div class="col-md-4">
@@ -735,6 +736,7 @@
                                                                 </div>
                                                             </div>
                                                         </div>
+
                                                     </div>
                                                     {{-- end --}}
                                                     {{-- 2nd person --}}
@@ -743,7 +745,6 @@
                                                         <div class="container">
                                                             <hr id="hrline"
                                                                 style="height: 1px;boder-width:0;color:black;background-color:black">
-
                                                             <br>
                                                             <div class="row">
                                                                 <div class="col-md-12">

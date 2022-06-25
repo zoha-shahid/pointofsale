@@ -18,4 +18,21 @@ class ProductController extends Controller
         // $shows = ContactGroup::get();
         return view('Admin.products.add');
     }
+    public function show()
+    {
+        // $shows = ContactGroup::get();
+        return view('Admin.products.variation');
+    }
+
+    public function lables()
+    {
+        // $shows = ContactGroup::get();
+        return view('Admin.products.lables');
+    }
+
+    public function import()
+    {
+        // $shows = ContactGroup::get();
+        return view('Admin.products.import_product');
+    }
 }
