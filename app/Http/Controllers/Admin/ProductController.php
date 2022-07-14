@@ -59,4 +59,9 @@ class ProductController extends Controller
     {
         return view('Admin.products.warranties');
     }
+
+    public function selling()
+    {
+        return view('Admin.products.selling_price_group');
+    }
 }

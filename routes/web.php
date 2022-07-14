@@ -80,6 +80,7 @@ Route::group(array('prefix' => 'dashboard'), function () {
         Route::get('catgry',[ProductController::class, 'catgry']);
         Route::get('brand',[ProductController::class, 'brand']);
         Route::get('warranties',[ProductController::class, 'warranties']);
+        Route::get('selling',[ProductController::class, 'selling']);
        });
 });
 
